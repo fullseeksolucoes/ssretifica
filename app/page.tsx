@@ -31,18 +31,22 @@ const services = [
   {
     t: "Retífica completa",
     d: "Reconstrução integral com peças originais e teste dinâmico final.",
+    img: "/retifica.webp",
   },
   {
     t: "Cabeçotes CNC",
     d: "Plano, sedes, guias e teste hidráulico de estanqueidade.",
+    img: "/cabecote.webp",
   },
   {
     t: "Virabrequins",
     d: "Polimento, mancalização e balanceamento dinâmico calibrado.",
+    img: "/virabrequins.webp",
   },
   {
     t: "Diagnóstico técnico",
     d: "Compressão, leak-down e análise espectrométrica de óleo.",
+    img: "/diagnostico.webp",
   },
 ];
 
@@ -228,18 +232,27 @@ export default function Home() {
             {services.map((s, i) => (
               <div
                 key={s.t}
-                className="bg-background p-8 flex flex-col h-full group hover:bg-foreground hover:text-background transition-colors duration-500"
+                className="relative overflow-hidden bg-foreground text-background"
               >
-                <span className="text-xs tracking-[0.22em] text-accent">
-                  0{i + 1} / 0{services.length}
-                </span>
-                <div className="mt-8 font-display text-2xl font-semibold tracking-tight">
-                  {s.t}
+                <Image
+                  src={s.img}
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  className="absolute inset-0 object-cover z-0 opacity-40"
+                />
+                <div className="relative z-10 p-8 flex flex-col h-full">
+                  <span className="text-xs tracking-[0.22em] text-accent">
+                    0{i + 1} / 0{services.length}
+                  </span>
+                  <div className="mt-8 font-display text-2xl font-semibold tracking-tight">
+                    {s.t}
+                  </div>
+                  <p className="mt-3 text-sm text-background/70 leading-relaxed flex-1">
+                    {s.d}
+                  </p>
+                  <div className="mt-8 pt-6 border-t border-background/20 flex items-center justify-between text-xs uppercase tracking-[0.2em]"></div>
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground group-hover:text-background/70 leading-relaxed flex-1">
-                  {s.d}
-                </p>
-                <div className="mt-8 pt-6 border-t hairline group-hover:border-background/20 flex items-center justify-between text-xs uppercase tracking-[0.2em]"></div>
               </div>
             ))}
           </div>

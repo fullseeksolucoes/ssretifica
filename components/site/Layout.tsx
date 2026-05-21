@@ -208,14 +208,15 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-background/80">
               <li>
                 <a
-                  href="https://maps.google.com/?q=Rua+Perlita+233+Contagem"
+                  href="https://maps.app.goo.gl/1W4UGAd8ZtY2Goiu5"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-start gap-2 group"
                 >
                   <FaMapMarkedAlt className="mt-0.5 text-accent group-hover:text-accent/80 transition-colors shrink-0" />
                   <span className="group-hover:text-accent transition-colors">
-                    Rua Perlita, 233 — Cidade Industrial · Contagem / MG
+                    Rua João de Deus Matos, 197 - Ipiranga, Belo Horizonte - MG,
+                    31160-080
                   </span>
                 </a>
               </li>

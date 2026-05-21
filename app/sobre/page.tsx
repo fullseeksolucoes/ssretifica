@@ -37,6 +37,7 @@ export default function Sobre() {
         eyebrow="A Empresa"
         title="Uma engenharia de motores construída sobre tradição, método e medição."
         lead="Desde 2020 em Belo Horizonte, a SS Retífica é referência em retífica de alta precisão, atendendo frotistas, oficinas parceiras e proprietários exigentes de toda a região metropolitana."
+        sideImage="/hero-about.webp"
       />
 
       <section className="mx-auto max-w-350 px-6 lg:px-10 py-20 grid lg:grid-cols-12 gap-12">

@@ -52,22 +52,44 @@ const services = [
 
 const reviews = [
   {
-    n: "Marcos Vinícius",
-    r: "Frotista · Transportadora MV Cargas",
-    s: "Retificaram quatro motores Cummins da nossa frota. Zero retorno técnico em 18 meses. Operação séria, prazo cumprido e laudo entregue com tudo documentado.",
-    d: "há 3 semanas",
+    n: "Analuu Abreu",
+    s: "Excelente profissionais e serviços de qualidade! Gosto muito de ser clientes de vocês",
+    d: "há uma semana",
   },
   {
-    n: "Renata Salles",
-    r: "Proprietária · Mercedes 280 SL 1971",
-    s: "Restauração do motor do meu SL antigo. Trataram cada peça como relíquia — e o resultado é audível. Motor suave, silencioso, com o caráter original preservado.",
-    d: "há 2 meses",
+    n: "Magnus Konare",
+    s: "Serviço de excelência prestado pelo pessoal desta retífica. Tudo ocorreu bem e a entrega do motor foi feita antes do prazo combinado. Agradeço a toda equipe SS.",
+    d: "há 2 anos",
   },
   {
-    n: "Eduardo Pimentel",
-    r: "Oficina parceira · Auto Pimentel BH",
-    s: "Há oito anos terceirizamos toda usinagem com a Núcleo. Confiança absoluta. Preço justo, prazo confiável, técnica impecável.",
-    d: "há 1 mês",
+    n: "Fabricio Rocha",
+    s: "Excelente serviço",
+    d: "há 2 anos",
+  },
+  {
+    n: "Andre Lucas",
+    s: "Muito bem atendido pelo Sérgio e toda sua equipe. Grande abraço!! Martins Centro Automotivo",
+    d: "há 3 anos",
+  },
+  {
+    n: "Matheus Rodrigues",
+    s: "Melhor retifica de Belo Horizonte",
+    d: "há 5 anos",
+  },
+  {
+    n: "Joselito Lima Reis",
+    s: "Excelente ! Ótimo trabalho e o que é difícil nos dias atuais , honestidade! Parabéns ao Hudson e sua equipe!!",
+    d: "há 6 anos",
+  },
+  {
+    n: "Washington Souza",
+    s: "Ótima retifica qualidade e preço, procurar o Sérgio ou Samuel",
+    d: "há 7 anos",
+  },
+  {
+    n: "Jose Ângelo",
+    s: "Ótima",
+    d: "há 8 anos",
   },
 ];
 
@@ -324,40 +346,42 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
-            {reviews.map((r) => (
-              <article
-                key={r.n}
-                className="bg-background p-8 border hairline flex flex-col"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="h-11 w-11 grid place-items-center rounded-full bg-foreground text-background font-display font-semibold">
-                    {r.n
-                      .split(" ")
-                      .map((w) => w[0])
-                      .slice(0, 2)
-                      .join("")}
+          <div className="mt-14 overflow-hidden mask-edges">
+            <div className="flex gap-6 carousel-reviews">
+              {[...reviews, ...reviews].map((r, i) => (
+                <article
+                  key={`${r.n}-${i}`}
+                  className="bg-background p-8 border hairline flex flex-col w-95 shrink-0"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="h-11 w-11 grid place-items-center rounded-full bg-foreground text-background font-display font-semibold">
+                      {r.n
+                        .split(" ")
+                        .map((w) => w[0])
+                        .slice(0, 2)
+                        .join("")}
+                    </div>
+                    <div>
+                      <div className="font-display font-semibold">{r.n}</div>
+                      {/* <div className="text-xs text-muted-foreground">{r.r}</div> */}
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-display font-semibold">{r.n}</div>
-                    <div className="text-xs text-muted-foreground">{r.r}</div>
+                  <div className="mt-5 text-accent text-sm tracking-wider">
+                    ★★★★★
                   </div>
-                </div>
-                <div className="mt-5 text-accent text-sm tracking-wider">
-                  ★★★★★
-                </div>
-                <p className="mt-4 text-sm text-foreground/80 leading-relaxed flex-1">
-                  {r.s}
-                </p>
-                <div className="mt-6 pt-4 border-t hairline flex items-center justify-between text-xs text-muted-foreground">
-                  <span>{r.d}</span>
-                  <span className="flex items-center gap-1.5">
-                    <span className="h-1.5 w-1.5 bg-accent rounded-full" />
-                    verificado
-                  </span>
-                </div>
-              </article>
-            ))}
+                  <p className="mt-4 text-sm text-foreground/80 leading-relaxed flex-1">
+                    {r.s}
+                  </p>
+                  <div className="mt-6 pt-4 border-t hairline flex items-center justify-between text-xs text-muted-foreground">
+                    <span>{r.d}</span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="h-1.5 w-1.5 bg-accent rounded-full" />
+                      verificado
+                    </span>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>

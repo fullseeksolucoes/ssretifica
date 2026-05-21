@@ -27,8 +27,8 @@ export default function Contato() {
             },
             {
               l: "Endereço",
-              v: "Rua Perlita, 233\nCidade Industrial · Contagem / MG",
-              a: "https://maps.app.goo.gl/bdfTpAi83NCKF1dE8",
+              v: "Rua João de Deus Matos, 197 - Ipiranga, Belo Horizonte - MG, 31160-080",
+              a: "https://maps.app.goo.gl/1W4UGAd8ZtY2Goiu5",
             },
           ].map((c) => (
             <div key={c.l} className="border-l-2 border-accent pl-6">
@@ -71,7 +71,7 @@ export default function Contato() {
           <div className="aspect-4/5 lg:aspect-auto lg:h-full relative overflow-hidden border hairline">
             <iframe
               title="Localização SS Retífica"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.9255448700214!2d-43.9354394!3d-19.8853656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69a7048db4e27%3A0x74455e7d3ab24181!2sSS%20RET%C3%8DFICA%20DE%20MOTORES%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1779241571308!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9185.12262179608!2d-43.93603090206885!3d-19.88524194384415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69a7048db4e27%3A0x74455e7d3ab24181!2sSS%20RET%C3%8DFICA%20DE%20MOTORES%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1779324308429!5m2!1spt-BR!2sbr"
               className="absolute inset-0 h-full w-full grayscale contrast-110"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

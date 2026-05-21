@@ -119,11 +119,12 @@ const faqs = [
 export default function Servicos() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <Layout>
+    <Layout transparentHeader>
       <PageHero
         eyebrow="Serviços Técnicos"
         title="Operações de engenharia, executadas com método e controle metrológico."
         lead="Cada serviço da SS Retífica segue procedimento técnico documentado, rastreável e validado por engenheiro responsável."
+        backgroundImage="/hero-service.webp"
       />
 
       <section className="mx-auto max-w-350 px-6 lg:px-10 py-20">

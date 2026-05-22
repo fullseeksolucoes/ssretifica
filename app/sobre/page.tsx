@@ -5,10 +5,10 @@ import { Layout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
 
 const metrics = [
-  { v: "22+", l: "Anos de operação" },
-  { v: "1.000", l: "Motores entregues" },
+  { v: "CNC", l: "Usinagem controlada" },
   { v: "±0,01mm", l: "Tolerância de usinagem" },
-  { v: "100%", l: "Garantia técnica" },
+  { v: "12 meses", l: "Garantia técnica" },
+  { v: "CREA", l: "Engenharia responsável" },
 ];
 
 const values = [
@@ -35,8 +35,8 @@ export default function Sobre() {
     <Layout>
       <PageHero
         eyebrow="A Empresa"
-        title="Uma engenharia de motores construída sobre tradição, método e medição."
-        lead="Desde 2020 em Belo Horizonte, a SS Retífica é referência em retífica de alta precisão, atendendo frotistas, oficinas parceiras e proprietários exigentes de toda a região metropolitana."
+        title="Engenharia de motores construída sobre método e medição."
+        lead="A SS Retífica atende frotistas, oficinas parceiras e proprietários particulares de toda a região metropolitana de Belo Horizonte com serviços especializados de retífica e usinagem de motores."
         sideImage="/hero-about.webp"
       />
 
@@ -46,32 +46,29 @@ export default function Sobre() {
             Nossa história
           </div>
           <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold tracking-tight">
-            Da bancada artesanal ao centro técnico de referência.
+            Perfil técnico e estrutura operacional.
           </h2>
         </div>
         <div className="lg:col-span-7 space-y-6 text-muted-foreground leading-relaxed">
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            dolorem maxime labore impedit repellat et quo voluptatibus! Sunt
-            magni ad quae magnam nostrum repudiandae, saepe mollitia. Fuga vel
-            fugit voluptatem ab sed. Eos maiores rem voluptatem odio qui aut,
-            assumenda cum. Voluptatibus reiciendis dolorem consequuntur! Eos ad
-            officiis blanditiis, ex doloremque ea qui nisi unde omnis,
-            aspernatur nobis incidunt recusandae et perspiciatis natus in
-            quisquam necessitatibus suscipit at consectetur laborum?
+            A SS Retífica é especializada em retífica de motores e usinagem de
+            componentes mecânicos para veículos nacionais e importados. Atuamos
+            com motores a gasolina, etanol e diesel leve, oferecendo serviços
+            que vão desde a retífica completa de cabeçotes até a montagem final
+            em sala limpa.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-            perspiciatis, quisquam vel doloremque delectus ipsa facilis
-            voluptates cum corrupti aspernatur culpa temporibus iure nostrum
-            quis ratione similique, provident aliquid, quo aperiam beatae. Ea
-            fuga obcaecati hic amet minima numquam? Ea.
+            Nossa estrutura operacional conta com máquinas CNC, bancada
+            metrológica tridimensional e sala limpa de montagem — recursos que
+            permitem manter tolerâncias rigorosas em cada etapa do processo.
+            Toda operação é documentada e validada por engenheiro mecânico
+            responsável.
           </p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            nisi totam iusto quisquam velit optio facilis neque. Iusto, quaerat
-            ad similique aspernatur quam sed, nesciunt quisquam obcaecati
-            consequuntur impedit facilis?
+            Trabalhamos com frota pesada, utilitários, veículos de passeio e
+            motores preparados. O diagnóstico técnico inicial é feito sem custo
+            e o cliente pode acompanhar cada fase do serviço mediante
+            agendamento.
           </p>
         </div>
       </section>
@@ -117,7 +114,7 @@ export default function Sobre() {
             Estrutura
           </div>
           <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold tracking-tight">
-            1.800 m² de operação técnica controlada.
+            Estrutura técnica para usinagem e montagem de precisão.
           </h2>
           <ul className="mt-8 divide-y hairline border-y hairline">
             {[
@@ -185,15 +182,15 @@ export default function Sobre() {
         <div className="relative h-full mx-auto max-w-350 px-6 lg:px-10 flex items-center">
           <blockquote className="max-w-2xl text-background">
             <div className="text-accent text-xs uppercase tracking-[0.28em]">
-              Filosofia
+              Compromisso técnico
             </div>
             <p className="mt-4 font-display text-2xl md:text-4xl font-medium leading-tight text-balance">
-              &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Facilis dolores numquam, distinctio sequi dolor nobis possimus
-              quibusdam delectus eos architecto.&rdquo;
+              &ldquo;Não entregamos um motor. Entregamos um conjunto usinado,
+              medido, testado e documentado — com a responsabilidade de quem
+              assina embaixo de cada tolerância.&rdquo;
             </p>
             <footer className="mt-6 text-sm text-background/70">
-              — Nome Sobrenome, Cargo na Empresa
+              — Engenharia SS Retífica
             </footer>
           </blockquote>
         </div>

@@ -29,17 +29,17 @@ const differentials = [
 
 const services = [
   {
-    t: "Retífica completa",
-    d: "Reconstrução integral com peças originais e teste dinâmico final.",
+    t: "Retífica completa de motores",
+    d: "Reconstrução integral com substituição de peças críticas e teste dinâmico final.",
     img: "/retifica.webp",
   },
   {
-    t: "Cabeçotes CNC",
-    d: "Plano, sedes, guias e teste hidráulico de estanqueidade.",
+    t: "Usinagem de cabeçotes",
+    d: "Retífica de plano, sedes, guias e teste hidráulico de estanqueidade.",
     img: "/cabecote.webp",
   },
   {
-    t: "Virabrequins",
+    t: "Retífica de virabrequins",
     d: "Polimento, mancalização e balanceamento dinâmico calibrado.",
     img: "/virabrequins.webp",
   },
@@ -110,7 +110,7 @@ export default function Home() {
         <div className="relative h-full min-h-screen mx-auto max-w-350 px-6 lg:px-10 pt-36 md:pt-44 pb-16 flex flex-col">
           <div className="flex items-center gap-3 text-[10px] md:text-xs uppercase tracking-[0.3em] text-background/60 reveal-up">
             <span className="h-px w-12 bg-accent" />
-            Retífica de motores · Belo Horizonte · desde 2020
+            Retífica de motores · Belo Horizonte
           </div>
 
           <div className="mt-auto grid lg:grid-cols-12 gap-10 items-end">
@@ -147,10 +147,10 @@ export default function Home() {
 
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 border-t border-background/15 pt-8 gap-6">
             {[
-              ["22+", "Anos de operação"],
-              ["1.000", "Motores entregues"],
-              ["±0,01mm", "Tolerância média"],
+              ["CNC", "Usinagem controlada"],
+              ["±0,01mm", "Tolerância de usinagem"],
               ["12 meses", "Garantia técnica"],
+              ["CREA", "Engenharia responsável"],
             ].map(([v, l]) => (
               <div key={l}>
                 <div className="font-display text-3xl md:text-4xl text-accent tracking-tight">
@@ -335,7 +335,7 @@ export default function Home() {
                 Avaliações Google
               </div>
               <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold tracking-tight max-w-2xl text-balance">
-                4.7 / 5 em 25 avaliações verificadas.
+                O que dizem nossos clientes.
               </h2>
             </div>
             <div className="flex items-center gap-2 text-2xl text-accent">
@@ -363,7 +363,6 @@ export default function Home() {
                     </div>
                     <div>
                       <div className="font-display font-semibold">{r.n}</div>
-                      {/* <div className="text-xs text-muted-foreground">{r.r}</div> */}
                     </div>
                   </div>
                   <div className="mt-5 text-accent text-sm tracking-wider">
@@ -387,22 +386,7 @@ export default function Home() {
       </section>
 
       <section className="relative bg-foreground text-background overflow-hidden">
-        <div className="absolute -right-32 -top-32 h-125 w-125 rounded-full border border-background/10 spin-slow">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 h-3 w-3 rounded-full bg-accent" />
-        </div>
-        <div
-          className="absolute -right-10 top-1/2 -translate-y-1/2 h-75 w-75 rounded-full border border-background/10 spin-slow"
-          style={
-            {
-              animationDirection: "reverse",
-              animationDuration: "24s",
-            } as React.CSSProperties
-          }
-        >
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-accent" />
-        </div>
-
-        <div className="relative mx-auto max-w-350 px-6 lg:px-10 py-32 grid lg:grid-cols-12 gap-12 items-center">
+        <div className="mx-auto max-w-350 px-6 lg:px-10 py-32 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
             <div className="text-xs uppercase tracking-[0.28em] text-accent">
               Próximo passo

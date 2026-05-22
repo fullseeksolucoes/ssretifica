@@ -31,11 +31,6 @@ export function PageHero({
         </>
       )}
       {!backgroundImage && <div className="absolute inset-0 grid-lines opacity-40 pointer-events-none" />}
-      {!sideImage && (
-        <div className="absolute top-32 right-10 h-64 w-64 rounded-full border border-accent/30 spin-slow pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-accent" />
-        </div>
-      )}
       <div className="relative mx-auto max-w-350 px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>

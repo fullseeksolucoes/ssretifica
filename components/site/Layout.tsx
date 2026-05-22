@@ -235,18 +235,18 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+553134912200"
+                  href="tel:+553130421747"
                   className="flex items-center gap-2 group"
                 >
                   <BsTelephoneFill className="text-accent group-hover:text-accent/80 transition-colors shrink-0" />
                   <span className="group-hover:text-accent transition-colors">
-                    Telefone Fixo · +55 (31) 3491-2200
+                    Telefone · +55 (31) 3042-1747
                   </span>
                 </a>
               </li>
               <li className="flex items-center gap-2 text-background/50">
                 <FaClock className="text-accent shrink-0" />
-                <span>Seg–Sex · 07h30 às 18h00 · Sáb 08h–12h</span>
+                <span>Seg–Sex · 08h00 às 17h45</span>
               </li>
             </ul>
           </div>

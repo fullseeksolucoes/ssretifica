@@ -4,13 +4,6 @@ import Image from "next/image";
 import { Layout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
 
-const metrics = [
-  { v: "CNC", l: "Usinagem controlada" },
-  { v: "±0,01mm", l: "Tolerância de usinagem" },
-  { v: "12 meses", l: "Garantia técnica" },
-  { v: "CREA", l: "Engenharia responsável" },
-];
-
 const values = [
   {
     t: "Precisão metrológica",
@@ -75,27 +68,15 @@ export default function Sobre() {
 
       <section className="bg-foreground text-background py-20">
         <div className="mx-auto max-w-350 px-6 lg:px-10">
-          <div className="flex items-end justify-between flex-wrap gap-6">
-            <div>
-              <div className="text-xs uppercase tracking-[0.28em] text-accent">
-                Indicadores
-              </div>
-              <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold tracking-tight max-w-xl">
-                Números que medem nossa operação.
-              </h2>
+          <div className="max-w-2xl">
+            <div className="text-xs uppercase tracking-[0.28em] text-accent">
+              Capacidade técnica
             </div>
-          </div>
-          <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 divide-x divide-background/10 border-y border-background/10">
-            {metrics.map((m) => (
-              <div key={m.l} className="p-8">
-                <div className="font-display text-5xl md:text-6xl text-accent tracking-tight">
-                  {m.v}
-                </div>
-                <div className="mt-3 text-xs uppercase tracking-[0.22em] text-background/60">
-                  {m.l}
-                </div>
-              </div>
-            ))}
+            <p className="mt-5 font-display text-2xl md:text-3xl font-medium leading-snug text-background/80">
+              A SS Retífica opera com usinagem CNC, bancada metrológica
+              tridimensional, teste dinâmico e sala limpa de montagem — estrutura
+              para manter tolerâncias rigorosas em cada serviço.
+            </p>
           </div>
         </div>
       </section>
@@ -151,16 +132,12 @@ export default function Sobre() {
           Missão & Valores
         </div>
         <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight max-w-3xl">
-          Engenharia que se prova em cada compressão.
+          Responsabilidade técnica em cada etapa.
         </h2>
         <div className="mt-12 grid md:grid-cols-2 gap-px bg-border border hairline">
-          {values.map((v, i) => (
+          {values.map((v) => (
             <div key={v.t} className="bg-background p-10">
-              <div className="flex items-center gap-3 text-accent font-display text-sm">
-                <span>0{i + 1}</span>
-                <span className="h-px w-8 bg-accent" />
-              </div>
-              <div className="mt-5 font-display text-2xl font-semibold tracking-tight">
+              <div className="font-display text-2xl font-semibold tracking-tight">
                 {v.t}
               </div>
               <p className="mt-3 text-muted-foreground leading-relaxed">

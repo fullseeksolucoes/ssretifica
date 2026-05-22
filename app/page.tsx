@@ -6,22 +6,18 @@ import { Layout } from "@/components/site/Layout";
 
 const differentials = [
   {
-    n: "01",
     t: "Controle metrológico",
     d: "Bancada tridimensional, micrômetros calibrados e laudo técnico em cada operação.",
   },
   {
-    n: "02",
     t: "Engenheiro responsável",
     d: "Toda retífica é validada e assinada por engenheiro mecânico CREA/MG ativo.",
   },
   {
-    n: "03",
     t: "Garantia técnica 12 meses",
     d: "Cobertura formal de 12 meses ou 20.000 km, com suporte pós-entrega dedicado.",
   },
   {
-    n: "04",
     t: "Sala limpa de montagem",
     d: "Ambiente controlado para preservar tolerâncias de motores de alto desempenho.",
   },
@@ -71,26 +67,26 @@ const reviews = [
     s: "Muito bem atendido pelo Sérgio e toda sua equipe. Grande abraço!! Martins Centro Automotivo",
     d: "há 3 anos",
   },
-  {
-    n: "Matheus Rodrigues",
-    s: "Melhor retifica de Belo Horizonte",
-    d: "há 5 anos",
-  },
-  {
-    n: "Joselito Lima Reis",
-    s: "Excelente ! Ótimo trabalho e o que é difícil nos dias atuais , honestidade! Parabéns ao Hudson e sua equipe!!",
-    d: "há 6 anos",
-  },
-  {
-    n: "Washington Souza",
-    s: "Ótima retifica qualidade e preço, procurar o Sérgio ou Samuel",
-    d: "há 7 anos",
-  },
-  {
-    n: "Jose Ângelo",
-    s: "Ótima",
-    d: "há 8 anos",
-  },
+  // {
+  //   n: "Matheus Rodrigues",
+  //   s: "Melhor retifica de Belo Horizonte",
+  //   d: "há 5 anos",
+  // },
+  // {
+  //   n: "Joselito Lima Reis",
+  //   s: "Excelente ! Ótimo trabalho e o que é difícil nos dias atuais , honestidade! Parabéns ao Hudson e sua equipe!!",
+  //   d: "há 6 anos",
+  // },
+  // {
+  //   n: "Washington Souza",
+  //   s: "Ótima retifica qualidade e preço, procurar o Sérgio ou Samuel",
+  //   d: "há 7 anos",
+  // },
+  // {
+  //   n: "Jose Ângelo",
+  //   s: "Ótima",
+  //   d: "há 8 anos",
+  // },
 ];
 
 export default function Home() {
@@ -145,52 +141,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 border-t border-background/15 pt-8 gap-6">
-            {[
-              ["CNC", "Usinagem controlada"],
-              ["±0,01mm", "Tolerância de usinagem"],
-              ["12 meses", "Garantia técnica"],
-              ["CREA", "Engenharia responsável"],
-            ].map(([v, l]) => (
-              <div key={l}>
-                <div className="font-display text-3xl md:text-4xl text-accent tracking-tight">
-                  {v}
-                </div>
-                <div className="mt-2 text-[10px] uppercase tracking-[0.25em] text-background/50">
-                  {l}
-                </div>
-              </div>
-            ))}
+          <div className="mt-16 border-t border-background/15 pt-8">
+            <p className="text-xs uppercase tracking-[0.25em] text-background/50">
+              Motores nacionais e importados · Gasolina, etanol e diesel leve
+            </p>
           </div>
         </div>
       </section>
-
-      <div className="border-y hairline overflow-hidden bg-background py-5">
-        <div className="flex gap-16 marquee whitespace-nowrap font-display text-2xl tracking-tight text-muted-foreground">
-          {Array(2)
-            .fill(null)
-            .map((_, k) => (
-              <div key={k} className="flex items-center gap-16">
-                {[
-                  "Mercedes-Benz",
-                  "Cummins",
-                  "Volkswagen",
-                  "MWM",
-                  "Volvo",
-                  "Scania",
-                  "Iveco",
-                  "GM",
-                  "Fiat Powertrain",
-                ].map((b) => (
-                  <span key={b + k} className="flex items-center gap-16">
-                    {b}
-                    <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  </span>
-                ))}
-              </div>
-            ))}
-        </div>
-      </div>
 
       <section className="mx-auto max-w-350 px-6 lg:px-10 py-28">
         <div className="grid lg:grid-cols-12 gap-12">
@@ -199,26 +156,20 @@ export default function Home() {
               Diferenciais técnicos
             </div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold tracking-tight text-balance">
-              Quatro pilares que sustentam cada motor que sai daqui.
+              Controle em cada etapa do processo.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed max-w-md">
-              Somos uma operação de retífica de motores dedicada exclusivamente
-              ao motor a combustão.
+              Da recepção à entrega, cada operação é medida, documentada e
+              validada por engenheiro responsável.
             </p>
           </div>
           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-px bg-border border hairline">
             {differentials.map((d) => (
               <div
-                key={d.n}
+                key={d.t}
                 className="bg-background p-8 hover:bg-foreground hover:text-background transition-colors duration-500 group"
               >
-                <div className="flex items-center justify-between">
-                  <span className="text-accent font-display tracking-widest">
-                    {d.n}
-                  </span>
-                  <span className="h-px w-12 bg-border group-hover:bg-accent transition-colors" />
-                </div>
-                <div className="mt-8 font-display text-xl font-semibold tracking-tight">
+                <div className="font-display text-xl font-semibold tracking-tight">
                   {d.t}
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground group-hover:text-background/70 leading-relaxed">
@@ -251,7 +202,7 @@ export default function Home() {
           </div>
 
           <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border hairline">
-            {services.map((s, i) => (
+            {services.map((s) => (
               <div
                 key={s.t}
                 className="relative overflow-hidden bg-foreground text-background"
@@ -263,17 +214,15 @@ export default function Home() {
                   sizes="(max-width: 768px) 100vw, 25vw"
                   className="absolute inset-0 object-cover z-0 opacity-40"
                 />
-                <div className="relative z-10 p-8 flex flex-col h-full">
-                  <span className="text-xs tracking-[0.22em] text-accent">
-                    0{i + 1} / 0{services.length}
-                  </span>
-                  <div className="mt-8 font-display text-2xl font-semibold tracking-tight">
-                    {s.t}
+                <div className="relative z-10 p-8 flex flex-col h-full min-h-56">
+                  <div className="mt-auto">
+                    <div className="font-display text-2xl font-semibold tracking-tight">
+                      {s.t}
+                    </div>
+                    <p className="mt-3 text-sm text-background/70 leading-relaxed">
+                      {s.d}
+                    </p>
                   </div>
-                  <p className="mt-3 text-sm text-background/70 leading-relaxed flex-1">
-                    {s.d}
-                  </p>
-                  <div className="mt-8 pt-6 border-t border-background/20 flex items-center justify-between text-xs uppercase tracking-[0.2em]"></div>
                 </div>
               </div>
             ))}
@@ -346,41 +295,39 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-14 overflow-hidden mask-edges">
-            <div className="flex gap-6 carousel-reviews">
-              {[...reviews, ...reviews].map((r, i) => (
-                <article
-                  key={`${r.n}-${i}`}
-                  className="bg-background p-8 border hairline flex flex-col w-95 shrink-0"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="h-11 w-11 grid place-items-center rounded-full bg-foreground text-background font-display font-semibold">
-                      {r.n
-                        .split(" ")
-                        .map((w) => w[0])
-                        .slice(0, 2)
-                        .join("")}
-                    </div>
-                    <div>
-                      <div className="font-display font-semibold">{r.n}</div>
-                    </div>
+          <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {reviews.map((r) => (
+              <article
+                key={r.n}
+                className="bg-background p-8 border hairline flex flex-col"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="h-11 w-11 grid place-items-center rounded-full bg-foreground text-background font-display font-semibold text-sm">
+                    {r.n
+                      .split(" ")
+                      .map((w) => w[0])
+                      .slice(0, 2)
+                      .join("")}
                   </div>
-                  <div className="mt-5 text-accent text-sm tracking-wider">
-                    ★★★★★
+                  <div>
+                    <div className="font-display font-semibold">{r.n}</div>
                   </div>
-                  <p className="mt-4 text-sm text-foreground/80 leading-relaxed flex-1">
-                    {r.s}
-                  </p>
-                  <div className="mt-6 pt-4 border-t hairline flex items-center justify-between text-xs text-muted-foreground">
-                    <span>{r.d}</span>
-                    <span className="flex items-center gap-1.5">
-                      <span className="h-1.5 w-1.5 bg-accent rounded-full" />
-                      verificado
-                    </span>
-                  </div>
-                </article>
-              ))}
-            </div>
+                </div>
+                <div className="mt-5 text-accent text-sm tracking-wider">
+                  ★★★★★
+                </div>
+                <p className="mt-4 text-sm text-foreground/80 leading-relaxed flex-1">
+                  {r.s}
+                </p>
+                <div className="mt-6 pt-4 border-t hairline flex items-center justify-between text-xs text-muted-foreground">
+                  <span>{r.d}</span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="h-1.5 w-1.5 bg-accent rounded-full" />
+                    verificado
+                  </span>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -427,6 +374,18 @@ export default function Home() {
               <span>↘</span>
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="border-t hairline bg-muted/20">
+        <div className="relative overflow-hidden">
+          <iframe
+            title="Localização SS Retífica"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9185.12262179608!2d-43.93603090206885!3d-19.88524194384415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69a7048db4e27%3A0x74455e7d3ab24181!2sSS%20RET%C3%8DFICA%20DE%20MOTORES%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1779324308429!5m2!1spt-BR!2sbr"
+            className="h-90 md:h-130 w-full grayscale contrast-125 brightness-[0.98]"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </section>
     </Layout>

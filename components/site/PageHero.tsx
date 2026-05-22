@@ -30,7 +30,6 @@ export function PageHero({
           <div className="absolute inset-0 bg-linear-to-r from-foreground/80 via-transparent to-transparent" />
         </>
       )}
-      {!backgroundImage && <div className="absolute inset-0 grid-lines opacity-40 pointer-events-none" />}
       <div className="relative mx-auto max-w-350 px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>

@@ -1,28 +1,91 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import StructuredData from "@/components/site/StructuredData";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
+  display: "swap",
 });
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-display",
+  display: "swap",
 });
 
+const siteUrl = "https://www.ssretifica.com.br";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#FB7409",
+};
+
 export const metadata: Metadata = {
-  title: "SS Retífica — Retífica e Engenharia de Motores | Belo Horizonte",
-  description:
-    "Retífica de motores de alta precisão em Belo Horizonte. Engenharia automotiva, usinagem de cabeçotes, retífica de virabrequins e montagem técnica.",
-  authors: [{ name: "SS Retífica" }],
-  openGraph: {
-    title: "SS Retífica — Engenharia de Motores",
-    description:
-      "Retífica e engenharia de motores em Belo Horizonte. Precisão industrial, tradição e desempenho.",
-    type: "website",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "SS Retífica — Retífica e Engenharia de Motores | Belo Horizonte",
+    template: "%s | SS Retífica",
   },
+  description:
+    "Retífica de motores em Belo Horizonte. Usinagem de cabeçotes, retífica de virabrequins, recondicionamento de bielas e montagem de motores nacionais e importados. Gasolina, etanol e diesel leve.",
+  keywords: [
+    "retífica em Belo Horizonte",
+    "retífica de motores BH",
+    "usinagem de cabeçotes",
+    "retífica de virabrequins",
+    "recondicionamento de bielas",
+    "montagem de motores",
+    "retífica de motores diesel",
+    "oficina de retífica BH",
+    "retífica de motores nacional",
+    "retífica de motores importado",
+    "SS Retífica",
+    "retífica Ipiranga BH",
+    "mecânica de motores BH",
+  ],
+  authors: [{ name: "SS Retífica" }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: "SS Retífica",
+    title: "SS Retífica — Retífica e Engenharia de Motores | Belo Horizonte",
+    description:
+      "Retífica de motores e usinagem de precisão em Belo Horizonte. Cabeçotes, virabrequins, blocos e montagem técnica com engenharia responsável.",
+    url: siteUrl,
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "SS Retífica — Engenharia de Motores em Belo Horizonte",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SS Retífica — Retífica e Engenharia de Motores | Belo Horizonte",
+    description:
+      "Retífica de motores com usinagem CNC, controle metrológico e garantia técnica de 12 meses em Belo Horizonte.",
+    images: ["/og-image.jpg"],
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
+  category: "automotive",
 };
 
 export default function RootLayout({
@@ -31,8 +94,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html
+      lang="pt-BR"
+      className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}
+    >
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+      </head>
+      <body className="min-h-full flex flex-col antialiased">
+        <StructuredData />
+        {children}
+      </body>
     </html>
   );
 }

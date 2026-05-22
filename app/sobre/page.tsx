@@ -14,8 +14,8 @@ const values = [
     d: "Diagnóstico documentado, peças mensuráveis e cliente acompanhando cada etapa da operação.",
   },
   {
-    t: "Engenharia aplicada",
-    d: "Equipe formada por engenheiros mecânicos e técnicos especialistas em motores de alto desempenho.",
+    t: "Equipe especializada",
+    d: "Técnicos com experiência em motores nacionais, importados e de alta performance.",
   },
   {
     t: "Responsabilidade",
@@ -28,7 +28,7 @@ export default function Sobre() {
     <Layout>
       <PageHero
         eyebrow="A Empresa"
-        title="Engenharia de motores construída sobre método e medição."
+        title="Uma retífica de motores construída sobre tradição, método e precisão."
         lead="A SS Retífica atende frotistas, oficinas parceiras e proprietários particulares de toda a região metropolitana de Belo Horizonte com serviços especializados de retífica e usinagem de motores."
         sideImage="/hero-about.webp"
       />
@@ -47,15 +47,14 @@ export default function Sobre() {
             A SS Retífica é especializada em retífica de motores e usinagem de
             componentes mecânicos para veículos nacionais e importados. Atuamos
             com motores a gasolina, etanol e diesel leve, oferecendo serviços
-            que vão desde a retífica completa de cabeçotes até a montagem final
-            em sala limpa.
+            que vão desde a retífica completa de cabeçotes até a montagem final.
           </p>
           <p>
-            Nossa estrutura operacional conta com máquinas CNC, bancada
-            metrológica tridimensional e sala limpa de montagem — recursos que
+            Nossa estrutura operacional conta com máquinas CNC dedicadas,
+            bancada metrológica e equipamentos de teste dinâmico — recursos que
             permitem manter tolerâncias rigorosas em cada etapa do processo.
-            Toda operação é documentada e validada por engenheiro mecânico
-            responsável.
+            Toda operação é documentada e acompanhada por técnicos
+            especializados.
           </p>
           <p>
             Trabalhamos com frota pesada, utilitários, veículos de passeio e
@@ -73,9 +72,9 @@ export default function Sobre() {
               Capacidade técnica
             </div>
             <p className="mt-5 font-display text-2xl md:text-3xl font-medium leading-snug text-background/80">
-              A SS Retífica opera com usinagem CNC, bancada metrológica
-              tridimensional, teste dinâmico e sala limpa de montagem — estrutura
-              para manter tolerâncias rigorosas em cada serviço.
+              A SS Retífica opera com usinagem CNC, bancada metrológica e teste
+              dinâmico — estrutura para manter tolerâncias rigorosas em cada
+              serviço.
             </p>
           </div>
         </div>
@@ -105,15 +104,15 @@ export default function Sobre() {
               ],
               [
                 "Laboratório metrológico",
-                "Micrômetros digitais, súbitos e bancada tridimensional.",
+                "Micrômetros digitais, súbitos e relógio comparador.",
               ],
               [
                 "Bancada de teste dinâmico",
                 "Verificação de pressão de óleo, vazão e leak-down.",
               ],
               [
-                "Sala limpa de montagem",
-                "Ambiente controlado para motores de alto desempenho.",
+                "Setor de montagem",
+                "Mecânicos especializados em motores nacionais e importados.",
               ],
             ].map(([t, d]) => (
               <li key={t} className="py-5 grid grid-cols-12 gap-6">
@@ -167,7 +166,7 @@ export default function Sobre() {
               assina embaixo de cada tolerância.&rdquo;
             </p>
             <footer className="mt-6 text-sm text-background/70">
-              — Engenharia SS Retífica
+              — SS Retífica
             </footer>
           </blockquote>
         </div>

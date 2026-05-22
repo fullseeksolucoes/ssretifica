@@ -3,7 +3,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 
 const WHATSAPP_LINK =
-  "https://wa.me/5531998124400?text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20SS%20Ret%C3%ADfica";
+  "https://wa.me/5531980235271?text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20SS%20Ret%C3%ADfica";
 
 export function FloatingWhatsApp() {
   return (

@@ -13,7 +13,10 @@ export default function StructuredData() {
         telephone: "+553130421747",
         logo: "https://www.ssretifica.com.br/logo.webp",
         image: "https://www.ssretifica.com.br/hero-engine.jpg",
-        sameAs: ["https://wa.me/5531998124400"],
+        sameAs: [
+          "https://wa.me/5531980235271",
+          "https://instagram.com/retificass",
+        ],
         priceRange: "R$",
         areaServed: [
           {
@@ -78,7 +81,7 @@ export default function StructuredData() {
         "@id": "https://www.ssretifica.com.br/#service",
         name: "Retífica e Usinagem de Motores",
         description:
-          "Serviços especializados em retífica de motores nacionais e importados, incluindo usinagem de cabeçotes, retífica de virabrequins, recondicionamento de bielas e montagem em sala limpa.",
+          "Serviços especializados em retífica de motores nacionais e importados, incluindo usinagem de cabeçotes, retífica de virabrequins, recondicionamento de bielas e montagem final.",
         provider: {
           "@id": "https://www.ssretifica.com.br/#business",
         },
@@ -113,15 +116,15 @@ export default function StructuredData() {
             name: "Qual o prazo médio de uma retífica completa?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Entre 8 e 14 dias úteis, dependendo da complexidade do motor e da disponibilidade de peças originais. Motores importados podem demandar prazo adicional para importação de componentes específicos.",
+              text: "Entre 8 e 14 dias úteis, dependendo da complexidade do motor e da disponibilidade de peças originais. Motores importados podem demandar prazo adicional.",
             },
           },
           {
             "@type": "Question",
-            name: "Vocês atendem motores diesel pesado?",
+            name: "Vocês atendem motores diesel?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Sim. Operamos motores Mercedes-Benz, Volvo, Scania, Cummins, MWM e Iveco — frotas urbanas, agronegócio e linha pesada.",
+              text: "Sim. Atuamos com motores diesel leve — incluindo Mercedes-Benz, Cummins, MWM e marcas comerciais leves.",
             },
           },
           {
@@ -129,7 +132,7 @@ export default function StructuredData() {
             name: "Existe garantia técnica?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Toda retífica acompanha garantia formal de 12 meses ou 20.000 km, com cobertura sobre a operação executada e peças aplicadas.",
+              text: "Toda retífica acompanha garantia formal de 3 meses (90 dias) com suporte pós-entrega dedicado.",
             },
           },
           {
@@ -137,7 +140,7 @@ export default function StructuredData() {
             name: "Posso acompanhar o serviço?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Sim. Disponibilizamos fotografias de cada etapa e recebemos visitas técnicas agendadas. Transparência integral é parte do protocolo.",
+              text: "Sim. Disponibilizamos fotografias de cada etapa e recebemos visitas técnicas agendadas.",
             },
           },
           {

@@ -51,13 +51,8 @@ export function PageHero({
             )}
           </div>
           {sideImage && (
-            <figure className="relative aspect-[4/3] overflow-hidden">
-              <Image
-                src={sideImage}
-                alt=""
-                fill
-                className="object-cover"
-              />
+            <figure className="relative aspect-4/3 overflow-hidden">
+              <Image src={sideImage} alt="" fill className="object-cover" />
             </figure>
           )}
         </div>

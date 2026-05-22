@@ -7,19 +7,19 @@ import { Layout } from "@/components/site/Layout";
 const differentials = [
   {
     t: "Controle metrológico",
-    d: "Bancada tridimensional, micrômetros calibrados e laudo técnico em cada operação.",
+    d: "Micrômetros calibrados e laudo técnico em cada operação.",
   },
   {
-    t: "Engenheiro responsável",
-    d: "Toda retífica é validada e assinada por engenheiro mecânico CREA/MG ativo.",
+    t: "Usinagem CNC dedicada",
+    d: "Máquinas específicas para cabeçotes, blocos, virabrequins e bielas.",
   },
   {
-    t: "Garantia técnica 12 meses",
-    d: "Cobertura formal de 12 meses ou 20.000 km, com suporte pós-entrega dedicado.",
+    t: "Garantia técnica 3 meses",
+    d: "Cobertura de 90 dias com suporte pós-entrega dedicado.",
   },
   {
-    t: "Sala limpa de montagem",
-    d: "Ambiente controlado para preservar tolerâncias de motores de alto desempenho.",
+    t: "Peças originais",
+    d: "Substituição por componentes genuínos em cada reconstrução.",
   },
 ];
 
@@ -41,7 +41,7 @@ const services = [
   },
   {
     t: "Diagnóstico técnico",
-    d: "Compressão, leak-down e análise espectrométrica de óleo.",
+    d: "Compressão, leak-down e inspeção de óleo lubrificante.",
     img: "/diagnostico.webp",
   },
 ];
@@ -159,8 +159,7 @@ export default function Home() {
               Controle em cada etapa do processo.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed max-w-md">
-              Da recepção à entrega, cada operação é medida, documentada e
-              validada por engenheiro responsável.
+              Da recepção à entrega, cada operação é medida e documentada.
             </p>
           </div>
           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-px bg-border border hairline">
@@ -339,12 +338,12 @@ export default function Home() {
               Próximo passo
             </div>
             <h2 className="mt-5 font-display text-5xl md:text-7xl font-semibold tracking-tight leading-[0.95] text-balance">
-              Seu motor merece <span className="text-accent">engenharia</span>,
+              Seu motor merece <span className="text-accent">excelência</span>,
               não improviso.
             </h2>
             <p className="mt-6 max-w-xl text-background/70 leading-relaxed text-lg">
-              Diagnóstico técnico inicial sem custo. Atendimento por engenheiro
-              responsável. Garantia formal de 12 meses em toda operação.
+              Atendimento técnico especializado, diagnóstico inicial sem custo e
+              garantia formal de 3 meses.
             </p>
           </div>
           <div className="lg:col-span-5 flex flex-col gap-3">
@@ -358,11 +357,11 @@ export default function Home() {
               <span>→</span>
             </Link>
             <a
-              href="https://wa.me/5531998124400"
+              href="https://wa.me/5531980235271"
               className="inline-flex items-center justify-between border border-background/30 px-8 py-5 hover:border-accent hover:text-accent transition-colors"
             >
               <span className="font-display text-lg font-medium">
-                WhatsApp · (31) 99812-4400
+                (31) 98023-5271
               </span>
               <span>↗</span>
             </a>

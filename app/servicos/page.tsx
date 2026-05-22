@@ -9,7 +9,7 @@ const services = [
   {
     code: "S.01",
     t: "Retífica completa de motores",
-    d: "Reconstrução integral de motores nacionais, importados e diesel pesado, com substituição de peças críticas e controle dimensional total.",
+    d: "Reconstrução integral de motores nacionais e importados, com substituição de peças críticas e controle dimensional total.",
     items: [
       "Desmontagem assistida",
       "Limpeza química industrial",
@@ -40,11 +40,11 @@ const services = [
   {
     code: "S.04",
     t: "Diagnóstico técnico",
-    d: "Avaliação completa com instrumentação digital, leak-down, compressão diferencial e análise de óleo lubrificante.",
+    d: "Avaliação completa com instrumentação digital, leak-down, compressão diferencial e inspeção de óleo lubrificante.",
     items: [
       "Compressão diferencial",
       "Leak-down test",
-      "Análise espectrométrica",
+      "Inspeção de óleo lubrificante",
     ],
   },
   {
@@ -84,12 +84,12 @@ const process = [
   {
     n: "04",
     t: "Montagem",
-    d: "Sala limpa, torque eletrônico, folgas verificadas e pré-lubrificação forçada do conjunto.",
+    d: "Torque controlado, folgas verificadas e pré-lubrificação forçada do conjunto.",
   },
   {
     n: "05",
     t: "Teste",
-    d: "Bancada dinâmica, leak-down, pressão de óleo e laudo técnico assinado pelo engenheiro responsável.",
+    d: "Bancada dinâmica, leak-down, pressão de óleo e laudo técnico final.",
   },
 ];
 
@@ -99,12 +99,12 @@ const faqs = [
     "Entre 8 e 14 dias úteis, dependendo da complexidade do motor e da disponibilidade de peças originais. Motores importados podem demandar prazo adicional para importação de componentes específicos.",
   ],
   [
-    "Vocês atendem motores diesel pesado?",
-    "Sim. Operamos motores Mercedes-Benz, Volvo, Scania, Cummins, MWM e Iveco — frotas urbanas, agronegócio e linha pesada.",
+    "Vocês atendem motores diesel?",
+    "Sim. Atuamos com motores diesel leve — incluindo Mercedes-Benz, Cummins, MWM e marcas comerciais leves.",
   ],
   [
     "Existe garantia técnica?",
-    "Toda retífica acompanha garantia formal de 12 meses ou 20.000 km, com cobertura sobre a operação executada e peças aplicadas.",
+    "Toda retífica acompanha garantia formal de 3 meses (90 dias) com suporte pós-entrega dedicado.",
   ],
   [
     "Posso acompanhar o serviço?",
@@ -122,8 +122,8 @@ export default function Servicos() {
     <Layout transparentHeader>
       <PageHero
         eyebrow="Serviços Técnicos"
-        title="Operações de engenharia, executadas com método e controle metrológico."
-        lead="Cada serviço da SS Retífica segue procedimento técnico documentado, rastreável e validado por engenheiro responsável."
+        title="Operações de usinagem, executadas com método e controle metrológico."
+        lead="Cada serviço da SS Retífica segue procedimento técnico documentado e rastreável."
         backgroundImage="/hero-service.webp"
       />
 
@@ -207,7 +207,7 @@ export default function Servicos() {
             href="/contato"
             className="mt-8 inline-flex items-center gap-3 text-foreground border-b border-accent pb-1 font-medium"
           >
-            Falar com engenheiro
+            Falar com equipe técnica
             <span className="h-1.5 w-1.5 bg-accent rounded-full" />
           </Link>
         </div>

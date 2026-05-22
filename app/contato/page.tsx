@@ -8,47 +8,60 @@ export default function Contato() {
     <Layout>
       <PageHero
         eyebrow="Contato"
-        title="Fale com a engenharia. Diagnóstico inicial sem custo."
+        title="Fale com a SS Retífica. Diagnóstico inicial sem custo."
         lead="Atendemos frotistas, oficinas parceiras e proprietários particulares de toda a região metropolitana de Belo Horizonte."
       />
 
       <section className="mx-auto max-w-350 px-6 lg:px-10 py-16 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5 space-y-10">
-          {[
-            {
-              l: "WhatsApp",
-              v: "+55 (31) 99812-4400",
-              a: "https://wa.me/5531998124400",
-            },
-            {
-              l: "Telefone Central",
-              v: "+55 (31) 3042-1747",
-              a: "tel:+553130421747",
-            },
-            {
-              l: "Endereço",
-              v: "Rua João de Deus Matos, 197 - Ipiranga, Belo Horizonte - MG, 31160-080",
-              a: "https://maps.app.goo.gl/1W4UGAd8ZtY2Goiu5",
-            },
-          ].map((c) => (
-            <div key={c.l} className="border-l-2 border-accent pl-6">
-              <div className="text-xs uppercase tracking-[0.28em] text-muted-foreground">
-                {c.l}
-              </div>
-              {c.a ? (
-                <a
-                  href={c.a}
-                  className="mt-2 block font-display text-2xl font-semibold hover:text-accent transition-colors whitespace-pre-line"
-                >
-                  {c.v}
-                </a>
-              ) : (
-                <div className="mt-2 font-display text-2xl font-semibold whitespace-pre-line">
-                  {c.v}
-                </div>
-              )}
+          <div className="border-l-2 border-accent pl-6">
+            <div className="text-xs uppercase tracking-[0.28em] text-muted-foreground">
+              WhatsApp
             </div>
-          ))}
+            <a
+              href="https://wa.me/5531980235271"
+              className="mt-2 block font-display text-2xl font-semibold hover:text-accent transition-colors"
+            >
+              +55 (31) 98023-5271
+            </a>
+          </div>
+
+          <div className="border-l-2 border-accent pl-6">
+            <div className="text-xs uppercase tracking-[0.28em] text-muted-foreground">
+              Telefones
+            </div>
+            <a
+              href="tel:+553184995069"
+              className="mt-3 block font-display text-2xl font-semibold hover:text-accent transition-colors"
+            >
+              +55 (31) 8499-5069
+            </a>
+            <a
+              href="tel:+553130421747"
+              className="mt-2 block font-display text-2xl font-semibold hover:text-accent transition-colors"
+            >
+              +55 (31) 3042-1747
+            </a>
+            <a
+              href="tel:+553132431999"
+              className="mt-2 block font-display text-2xl font-semibold hover:text-accent transition-colors"
+            >
+              +55 (31) 3243-1999
+            </a>
+          </div>
+
+          <div className="border-l-2 border-accent pl-6">
+            <div className="text-xs uppercase tracking-[0.28em] text-muted-foreground">
+              Endereço
+            </div>
+            <a
+              href="https://maps.app.goo.gl/1W4UGAd8ZtY2Goiu5"
+              className="mt-2 block font-display text-2xl font-semibold hover:text-accent transition-colors"
+            >
+              Rua João de Deus Matos, 197 - Ipiranga, Belo Horizonte - MG,
+              31160-080
+            </a>
+          </div>
 
           <div className="bg-foreground text-background p-8">
             <div className="text-xs uppercase tracking-[0.28em] text-accent">

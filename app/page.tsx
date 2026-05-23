@@ -7,19 +7,19 @@ import { Layout } from "@/components/site/Layout";
 const differentials = [
   {
     t: "Controle metrológico",
-    d: "Micrômetros calibrados e laudo técnico em cada operação.",
+    d: "Cada peça é medida com instrumentos calibrados e acompanhada de laudo técnico.",
   },
   {
-    t: "Usinagem CNC dedicada",
-    d: "Máquinas específicas para cabeçotes, blocos, virabrequins e bielas.",
+    t: "Usinagem de precisão",
+    d: "Equipamentos dedicados para cabeçotes, blocos, virabrequins e bielas dentro das tolerâncias do fabricante.",
   },
   {
-    t: "Garantia técnica 3 meses",
-    d: "Cobertura de 90 dias com suporte pós-entrega dedicado.",
+    t: "Garantia técnica de 3 meses",
+    d: "90 dias de cobertura com suporte direto da nossa equipe.",
   },
   {
     t: "Peças originais",
-    d: "Substituição por componentes genuínos em cada reconstrução.",
+    d: "Usamos componentes genuínos em cada serviço de reconstrução.",
   },
 ];
 
@@ -41,8 +41,13 @@ const services = [
   },
   {
     t: "Diagnóstico técnico",
-    d: "Compressão, leak-down e inspeção de óleo lubrificante.",
+    d: "Compressão, leak-down, pressão de óleo e inspeção de lubrificante.",
     img: "/diagnostico.webp",
+  },
+  {
+    t: "Remoção e instalação de motores",
+    d: "Remoção, preparação e reinstalação completa do motor no veículo.",
+    img: "/retifica.webp",
   },
 ];
 
@@ -111,16 +116,16 @@ export default function Home() {
 
           <div className="mt-auto grid lg:grid-cols-12 gap-10 items-end">
             <h1 className="lg:col-span-9 font-display text-5xl md:text-7xl lg:text-[5.5rem] font-semibold tracking-tight leading-[0.95] text-balance reveal-up">
-              Precisão industrial
+              Do diagnóstico à
               <br />
-              em cada <span className="text-accent">compressão</span>
+              entrega, o motor
               <br />
-              de motor.
+              nas <span className="text-accent">mãos certas</span>
             </h1>
             <div className="lg:col-span-3 space-y-6 reveal-up">
               <p className="text-background/70 leading-relaxed">
-                Retífica e engenharia de motores de alta performance, frotas
-                pesadas e linha clássica.
+                Fazemos o processo completo: remoção, usinagem, montagem e
+                instalação do motor.
               </p>
               <div className="flex flex-col gap-3">
                 <Link
@@ -156,10 +161,10 @@ export default function Home() {
               Diferenciais técnicos
             </div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold tracking-tight text-balance">
-              Controle em cada etapa do processo.
+              Controle em cada etapa do processo
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed max-w-md">
-              Da recepção à entrega, cada operação é medida e documentada.
+              Cada operação é medida e documentada, da recepção até a entrega.
             </p>
           </div>
           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-px bg-border border hairline">
@@ -188,7 +193,7 @@ export default function Home() {
                 Operações técnicas
               </div>
               <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold tracking-tight max-w-2xl text-balance">
-                Engenharia aplicada a cada componente do motor.
+                Engenharia em cada componente do motor
               </h2>
             </div>
             <Link
@@ -200,7 +205,12 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border hairline">
+          <p className="mt-8 max-w-2xl text-muted-foreground leading-relaxed">
+            Cuidamos de cada etapa, desde a remoção do motor até a instalação
+            final. Mais conveniência, mais precisão e mais confiança para você.
+          </p>
+
+          <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-5 gap-px bg-border border hairline">
             {services.map((s) => (
               <div
                 key={s.t}
@@ -210,7 +220,7 @@ export default function Home() {
                   src={s.img}
                   alt=""
                   fill
-                  sizes="(max-width: 768px) 100vw, 25vw"
+                  sizes="(max-width: 768px) 100vw, 20vw"
                   className="absolute inset-0 object-cover z-0 opacity-40"
                 />
                 <div className="relative z-10 p-8 flex flex-col h-full min-h-56">
@@ -236,10 +246,10 @@ export default function Home() {
               Operação
             </div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold tracking-tight text-balance">
-              Bastidores de uma operação metrológica.
+              Bastidores da operação
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed max-w-md">
-              Estrutura interna, máquinas dedicadas e o ritmo controlado de uma
+              Estrutura interna, máquinas dedicadas e o dia a dia de uma
               retífica de motores.
             </p>
           </div>
@@ -247,7 +257,7 @@ export default function Home() {
             <figure className="col-span-6 aspect-video overflow-hidden">
               <Image
                 src="/home1.webp"
-                alt="SS Retífica — vista interna"
+                alt="Vista interna da SS Retífica"
                 width={1920}
                 height={1080}
                 className="h-full w-full object-cover hover:scale-105 transition-transform duration-700"
@@ -283,7 +293,7 @@ export default function Home() {
                 Avaliações Google
               </div>
               <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold tracking-tight max-w-2xl text-balance">
-                O que dizem nossos clientes.
+                O que dizem nossos clientes
               </h2>
             </div>
             <div className="flex items-center gap-2 text-2xl text-accent">
@@ -342,8 +352,9 @@ export default function Home() {
               não improviso.
             </h2>
             <p className="mt-6 max-w-xl text-background/70 leading-relaxed text-lg">
-              Atendimento técnico especializado, diagnóstico inicial sem custo e
-              garantia formal de 3 meses.
+              Avaliação técnica inicial sem custo. Testes mais específicos são
+              feitos com autorização prévia e conforme a necessidade de cada
+              serviço.
             </p>
           </div>
           <div className="lg:col-span-5 flex flex-col gap-3">
@@ -352,7 +363,7 @@ export default function Home() {
               className="inline-flex items-center justify-between bg-accent text-accent-foreground px-8 py-5 hover:bg-background hover:text-foreground transition-colors"
             >
               <span className="font-display text-lg font-semibold">
-                Solicitar orçamento técnico
+                Solicitar orçamento
               </span>
               <span>→</span>
             </Link>

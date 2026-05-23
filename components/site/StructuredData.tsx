@@ -8,7 +8,7 @@ export default function StructuredData() {
         additionalType: "https://schema.org/AutomotiveBusiness",
         name: "SS Retífica",
         description:
-          "Retífica de motores e usinagem de precisão em Belo Horizonte. Especializada em cabeçotes, virabrequins, blocos e montagem de motores nacionais e importados.",
+          "Retífica de motores e usinagem de precisão em Belo Horizonte. Remoção, montagem e instalação de motores nacionais e importados.",
         url: "https://www.ssretifica.com.br",
         telephone: "+553130421747",
         logo: "https://www.ssretifica.com.br/logo.webp",
@@ -46,9 +46,11 @@ export default function StructuredData() {
           "Usinagem de cabeçotes",
           "Retífica de virabrequins",
           "Recondicionamento de bielas",
-          "Montagem de motores",
+          "Montagem especializada de motores",
           "Remoção e instalação de motores",
           "Diagnóstico técnico automotivo",
+          "Teste de pressão de óleo",
+          "Compressão diferencial",
           "Balanceamento dinâmico",
         ],
       },
@@ -81,7 +83,7 @@ export default function StructuredData() {
         "@id": "https://www.ssretifica.com.br/#service",
         name: "Retífica e Usinagem de Motores",
         description:
-          "Serviços especializados em retífica de motores nacionais e importados, incluindo usinagem de cabeçotes, retífica de virabrequins, recondicionamento de bielas e montagem final.",
+          "Serviços de retífica de motores nacionais e importados. Remoção, usinagem de cabeçotes, retífica de virabrequins, montagem e instalação final.",
         provider: {
           "@id": "https://www.ssretifica.com.br/#business",
         },
@@ -101,7 +103,8 @@ export default function StructuredData() {
           "Usinagem de cabeçotes",
           "Retífica de virabrequins",
           "Recondicionamento de bielas",
-          "Montagem de precisão",
+          "Remoção e instalação de motores",
+          "Montagem especializada de motores",
           "Diagnóstico técnico",
           "Teste dinâmico",
           "Balanceamento dinâmico",
@@ -124,7 +127,7 @@ export default function StructuredData() {
             name: "Vocês atendem motores diesel?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Sim. Atuamos com motores diesel leve — incluindo Mercedes-Benz, Cummins, MWM e marcas comerciais leves.",
+              text: "Sim. Atuamos com motores diesel leve, incluindo Mercedes-Benz, Cummins, MWM e marcas comerciais leves.",
             },
           },
           {
@@ -148,7 +151,15 @@ export default function StructuredData() {
             name: "Trabalham com motores de alta performance?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Sim. Possuímos linha dedicada a motores preparados — incluindo retífica de bloco com sobremedida, comando alto e ajustes para combustíveis alternativos.",
+              text: "Sim. Possuímos linha dedicada a motores preparados, incluindo retífica de bloco com sobremedida, comando alto e ajustes para combustíveis alternativos.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "O diagnóstico técnico é gratuito?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "A avaliação técnica preliminar, que inclui inspeção visual e análise auditiva, é realizada sem custo. Procedimentos diagnósticos específicos, como teste de pressão de óleo, compressão diferencial, fluxo e avaliação em bancada, são cobrados conforme a complexidade do serviço.",
             },
           },
         ],

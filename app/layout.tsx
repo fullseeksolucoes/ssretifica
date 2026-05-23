@@ -26,11 +26,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "SS Retífica — Retífica e Engenharia de Motores | Belo Horizonte",
+    default: "SS Retífica | Retífica de Motores em Belo Horizonte",
     template: "%s | SS Retífica",
   },
   description:
-    "Retífica de motores em Belo Horizonte. Usinagem de cabeçotes, retífica de virabrequins, recondicionamento de bielas e montagem de motores nacionais e importados. Gasolina, etanol e diesel leve.",
+    "Retífica de motores em Belo Horizonte. Remoção, usinagem, montagem e instalação de motores nacionais e importados. Gasolina, etanol e diesel leve.",
   keywords: [
     "retífica em Belo Horizonte",
     "retífica de motores BH",
@@ -40,8 +40,9 @@ export const metadata: Metadata = {
     "montagem de motores",
     "retífica de motores diesel",
     "oficina de retífica BH",
-    "retífica de motores nacional",
-    "retífica de motores importado",
+    "remoção e instalação de motores",
+    "montagem especializada de motores",
+    "diagnóstico técnico automotivo",
     "SS Retífica",
     "retífica Ipiranga BH",
     "mecânica de motores BH",
@@ -62,24 +63,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "SS Retífica",
-    title: "SS Retífica — Retífica e Engenharia de Motores | Belo Horizonte",
+    title: "SS Retífica | Retífica de Motores em Belo Horizonte",
     description:
-      "Retífica de motores e usinagem de precisão em Belo Horizonte. Cabeçotes, virabrequins, blocos e montagem técnica com engenharia responsável.",
+      "Retífica de motores e usinagem de precisão em Belo Horizonte. Remoção, montagem e instalação com responsabilidade técnica.",
     url: siteUrl,
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "SS Retífica — Engenharia de Motores em Belo Horizonte",
+        alt: "SS Retífica - Engenharia de Motores em Belo Horizonte",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SS Retífica — Retífica e Engenharia de Motores | Belo Horizonte",
+    title: "SS Retífica | Retífica de Motores em Belo Horizonte",
     description:
-      "Retífica de motores com usinagem CNC, controle metrológico e garantia técnica de 12 meses em Belo Horizonte.",
+      "Retífica de motores com usinagem de precisão, controle metrológico e garantia técnica de 3 meses em Belo Horizonte.",
     images: ["/og-image.jpg"],
   },
   alternates: {

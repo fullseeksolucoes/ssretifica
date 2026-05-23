@@ -177,9 +177,8 @@ export function Footer() {
               />
             </div>
             <p className="mt-6 max-w-md text-background/60 leading-relaxed text-sm">
-              Retífica e recondicionamento de motores com responsabilidade
-              técnica. Tradição, qualidade e compromisso em cada serviço
-              entregue.
+              Especializada em retífica, remoção, montagem e instalação de
+              motores. Responsabilidade técnica em cada serviço que entregamos.
             </p>
           </div>
 
@@ -256,12 +255,12 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+553184995069"
+                  href="tel:+5531984995069"
                   className="flex items-center gap-2 group"
                 >
                   <BsTelephoneFill className="text-accent group-hover:text-accent/80 transition-colors shrink-0" />
                   <span className="group-hover:text-accent transition-colors">
-                    (31) 8499-5069
+                    (31) 98499-5069
                   </span>
                 </a>
               </li>
@@ -289,7 +288,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2 text-background/50">
                 <FaClock className="text-accent shrink-0" />
-                <span>Seg–Sex · 08h00 às 17h45</span>
+                <span>Seg–Sex · 08h00 às 17h48</span>
               </li>
             </ul>
           </div>

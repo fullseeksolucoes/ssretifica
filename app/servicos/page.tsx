@@ -9,7 +9,7 @@ const services = [
   {
     code: "S.01",
     t: "Retífica completa de motores",
-    d: "Reconstrução integral de motores nacionais e importados, com substituição de peças críticas e controle dimensional total.",
+    d: "Reconstrução completa de motores nacionais e importados. Substituição de peças críticas e controle dimensional em todas as etapas.",
     items: [
       "Desmontagem assistida",
       "Limpeza química industrial",
@@ -20,9 +20,9 @@ const services = [
   {
     code: "S.02",
     t: "Usinagem de cabeçotes",
-    d: "Retífica de plano, alargamento de guias, troca de sedes, teste hidráulico de trincas e ajuste de câmara de combustão.",
+    d: "Serviço completo em cabeçotes: retífica de plano, troca de sedes e guias, teste hidráulico de trincas e ajuste de câmara de combustão.",
     items: [
-      "Retífica de plano CNC",
+      "Retífica de plano",
       "Alojamento de válvulas",
       "Teste de estanqueidade",
     ],
@@ -30,7 +30,7 @@ const services = [
   {
     code: "S.03",
     t: "Retífica de virabrequins",
-    d: "Mancalização sob medida, polimento de munhões e moentes, balanceamento dinâmico em bancada calibrada.",
+    d: "Mancalização personalizada, polimento de moentes e balanceamento dinâmico em bancada calibrada.",
     items: [
       "Polimento de moentes",
       "Mancalização sob medida",
@@ -39,57 +39,75 @@ const services = [
   },
   {
     code: "S.04",
-    t: "Diagnóstico técnico",
-    d: "Avaliação completa com instrumentação digital, leak-down, compressão diferencial e inspeção de óleo lubrificante.",
+    t: "Remoção e instalação de motores",
+    d: "Removemos o motor, preparamos o compartimento e reinstalamos tudo no veículo com os ajustes necessários.",
     items: [
+      "Remoção assistida do motor",
+      "Preparação do cofre do motor",
+      "Reinstalação e alinhamento",
+      "Teste de funcionamento no veículo",
+    ],
+  },
+  {
+    code: "S.05",
+    t: "Diagnóstico técnico",
+    d: "A avaliação preliminar é sem custo. Testes específicos como compressão ou pressão de óleo são feitos quando necessário e com autorização prévia.",
+    items: [
+      "Avaliação técnica inicial",
       "Compressão diferencial",
+      "Teste de pressão de óleo",
       "Leak-down test",
       "Inspeção de óleo lubrificante",
     ],
   },
   {
-    code: "S.05",
-    t: "Montagem de precisão",
-    d: "Montagem em sala limpa, torque controlado eletronicamente, folgas medidas com plastigauge e relógio comparador.",
+    code: "S.06",
+    t: "Montagem especializada de motores",
+    d: "Montamos o motor com componentes usinados, controle dimensional rigoroso e ajuste de folgas dentro das especificações do fabricante.",
     items: [
-      "Torque eletrônico",
-      "Plastigauge em mancais",
+      "Montagem do bloco e cabeçote",
+      "Aferição de folgas e torques",
       "Pré-lubrificação forçada",
+      "Verificação de vedação e estanqueidade",
     ],
   },
   {
-    code: "S.06",
+    code: "S.07",
     t: "Teste e dinamômetro",
-    d: "Verificação de pressão de óleo, vazão, ruído, temperatura e rodagem inicial controlada em bancada de prova.",
-    items: ["Pressão e vazão", "Rodagem assistida", "Laudo técnico final"],
+    d: "Verificamos pressão de óleo, vazão, ruído e temperatura. A rodagem inicial é controlada em bancada de prova.",
+    items: [
+      "Pressão e vazão de óleo",
+      "Rodagem assistida",
+      "Laudo técnico final",
+    ],
   },
 ];
 
 const process = [
   {
     n: "01",
-    t: "Diagnóstico",
-    d: "Recepção, inspeção visual, instrumentação digital e definição do escopo técnico.",
+    t: "Diagnóstico e recepção",
+    d: "Recepção do veículo, inspeção visual, avaliação técnica preliminar e definição do escopo do serviço.",
   },
   {
     n: "02",
-    t: "Desmontagem",
-    d: "Catalogação fotográfica de cada componente e medição inicial em bancada metrológica.",
+    t: "Remoção do motor",
+    d: "Remoção assistida do motor, catalogação de componentes e preparação para usinagem.",
   },
   {
     n: "03",
     t: "Usinagem",
-    d: "Processos CNC dedicados — cabeçote, bloco, virabrequim, bielas — sob tolerâncias estritas.",
+    d: "Processos de usinagem dedicados para cabeçote, bloco, virabrequim e bielas, tudo dentro de tolerâncias rigorosas.",
   },
   {
     n: "04",
-    t: "Montagem",
-    d: "Torque controlado, folgas verificadas e pré-lubrificação forçada do conjunto.",
+    t: "Montagem especializada",
+    d: "Montagem completa do motor com componentes usinados, torque controlado e folgas verificadas.",
   },
   {
     n: "05",
-    t: "Teste",
-    d: "Bancada dinâmica, leak-down, pressão de óleo e laudo técnico final.",
+    t: "Instalação e teste",
+    d: "Reinstalação no veículo, teste dinâmico, verificação de pressão e vazão e laudo técnico final.",
   },
 ];
 
@@ -100,7 +118,7 @@ const faqs = [
   ],
   [
     "Vocês atendem motores diesel?",
-    "Sim. Atuamos com motores diesel leve — incluindo Mercedes-Benz, Cummins, MWM e marcas comerciais leves.",
+    "Sim. Atuamos com motores diesel leve, incluindo Mercedes-Benz, Cummins, MWM e marcas comerciais leves.",
   ],
   [
     "Existe garantia técnica?",
@@ -112,7 +130,11 @@ const faqs = [
   ],
   [
     "Trabalham com motores de alta performance?",
-    "Sim. Possuímos linha dedicada a motores preparados — incluindo retífica de bloco com sobremedida, comando alto, e ajustes para combustíveis alternativos.",
+    "Sim. Temos linha dedicada a motores preparados, como retífica de bloco com sobremedida, comando alto e ajustes para combustíveis alternativos.",
+  ],
+  [
+    "O diagnóstico técnico é gratuito?",
+    "A avaliação técnica preliminar, que inclui inspeção visual e análise auditiva, é feita sem custo. Testes mais específicos como pressão de óleo, compressão diferencial e avaliação em bancada são cobrados conforme a complexidade do serviço. Consulte nossa equipe para mais informações.",
   ],
 ];
 
@@ -122,8 +144,8 @@ export default function Servicos() {
     <Layout transparentHeader>
       <PageHero
         eyebrow="Serviços Técnicos"
-        title="Operações de usinagem, executadas com método e controle metrológico."
-        lead="Cada serviço da SS Retífica segue procedimento técnico documentado e rastreável."
+        title="Da remoção à instalação: usinagem, montagem e teste com controle metrológico"
+        lead="Todos os serviços são executados com procedimento técnico documentado e rastreável."
         backgroundImage="/hero-service.webp"
       />
 
@@ -165,7 +187,7 @@ export default function Servicos() {
             Processo operacional
           </div>
           <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight max-w-3xl">
-            Cinco etapas, uma única tolerância: a sua especificação.
+            Cinco etapas, uma única tolerância: a sua especificação
           </h2>
 
           <div className="mt-16 relative">
@@ -200,8 +222,8 @@ export default function Servicos() {
             Respostas técnicas, objetivas.
           </h2>
           <p className="mt-6 text-muted-foreground">
-            Se a sua pergunta não está aqui, fale com nossa equipe técnica —
-            orçamento e diagnóstico inicial sem custo.
+            Se a sua pergunta não está aqui, fale com nossa equipe técnica.
+            Orçamento sem compromisso e avaliação inicial gratuita.
           </p>
           <Link
             href="/contato"

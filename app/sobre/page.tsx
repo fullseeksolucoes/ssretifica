@@ -28,8 +28,8 @@ export default function Sobre() {
     <Layout>
       <PageHero
         eyebrow="A Empresa"
-        title="Uma retífica de motores construída sobre tradição, método e precisão."
-        lead="A SS Retífica atende frotistas, oficinas parceiras e proprietários particulares de toda a região metropolitana de Belo Horizonte com serviços especializados de retífica e usinagem de motores."
+        title="Retífica de motores com tradição, método e precisão"
+        lead="Atendemos frotistas, oficinas e proprietários particulares de toda a região metropolitana de Belo Horizonte. Oferecemos serviços completos de remoção, usinagem, montagem e instalação de motores."
         sideImage="/hero-about.webp"
       />
 
@@ -39,28 +39,32 @@ export default function Sobre() {
             Nossa história
           </div>
           <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold tracking-tight">
-            Perfil técnico e estrutura operacional.
+            Processo completo com responsabilidade técnica
           </h2>
         </div>
         <div className="lg:col-span-7 space-y-6 text-muted-foreground leading-relaxed">
           <p>
             A SS Retífica é especializada em retífica de motores e usinagem de
             componentes mecânicos para veículos nacionais e importados. Atuamos
-            com motores a gasolina, etanol e diesel leve, oferecendo serviços
-            que vão desde a retífica completa de cabeçotes até a montagem final.
+            com motores a gasolina, etanol e diesel leve. Fazemos o processo
+            completo, da remoção do motor à instalação final.
           </p>
           <p>
-            Nossa estrutura operacional conta com máquinas CNC dedicadas,
-            bancada metrológica e equipamentos de teste dinâmico — recursos que
-            permitem manter tolerâncias rigorosas em cada etapa do processo.
-            Toda operação é documentada e acompanhada por técnicos
+            Nossa estrutura tem equipamentos de usinagem, bancada metrológica e
+            teste dinâmico. Esses recursos permitem manter tolerâncias rigorosas
+            em cada etapa. Toda operação é documentada e acompanhada por técnicos
             especializados.
           </p>
           <p>
             Trabalhamos com frota pesada, utilitários, veículos de passeio e
-            motores preparados. O diagnóstico técnico inicial é feito sem custo
-            e o cliente pode acompanhar cada fase do serviço mediante
+            motores preparados. A avaliação técnica preliminar é feita sem
+            custo e o cliente pode acompanhar cada fase do serviço mediante
             agendamento.
+          </p>
+          <p>
+            O cliente confia o veículo e nós cuidamos de tudo: diagnóstico,
+            remoção, usinagem, montagem especializada, reinstalação e teste
+            final. Um único responsável por cada etapa do processo.
           </p>
         </div>
       </section>
@@ -72,9 +76,10 @@ export default function Sobre() {
               Capacidade técnica
             </div>
             <p className="mt-5 font-display text-2xl md:text-3xl font-medium leading-snug text-background/80">
-              A SS Retífica opera com usinagem CNC, bancada metrológica e teste
-              dinâmico — estrutura para manter tolerâncias rigorosas em cada
-              serviço.
+              Da recepção do veículo à entrega final, a SS Retífica faz todo o
+              processo: remoção, usinagem, montagem especializada e instalação
+              do motor, com usinagem de precisão, bancada metrológica e teste
+              dinâmico.
             </p>
           </div>
         </div>
@@ -94,12 +99,12 @@ export default function Sobre() {
             Estrutura
           </div>
           <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold tracking-tight">
-            Estrutura técnica para usinagem e montagem de precisão.
+            Estrutura para usinagem e montagem de precisão
           </h2>
           <ul className="mt-8 divide-y hairline border-y hairline">
             {[
               [
-                "Setor de usinagem CNC",
+                "Setor de usinagem",
                 "Brunidoras, mandrilhadoras e retífica plana de cabeçotes.",
               ],
               [
@@ -130,9 +135,9 @@ export default function Sobre() {
         <div className="text-xs uppercase tracking-[0.28em] text-accent">
           Missão & Valores
         </div>
-        <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight max-w-3xl">
-          Responsabilidade técnica em cada etapa.
-        </h2>
+          <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight max-w-3xl">
+            Responsabilidade técnica em cada etapa
+          </h2>
         <div className="mt-12 grid md:grid-cols-2 gap-px bg-border border hairline">
           {values.map((v) => (
             <div key={v.t} className="bg-background p-10">
@@ -161,13 +166,10 @@ export default function Sobre() {
               Compromisso técnico
             </div>
             <p className="mt-4 font-display text-2xl md:text-4xl font-medium leading-tight text-balance">
-              &ldquo;Não entregamos um motor. Entregamos um conjunto usinado,
-              medido, testado e documentado — com a responsabilidade de quem
-              assina embaixo de cada tolerância.&rdquo;
+              &ldquo;Cada motor é usinado, medido, testado e documentado antes
+              de sair daqui. Assumimos a responsabilidade por cada
+              tolerância.&rdquo;
             </p>
-            <footer className="mt-6 text-sm text-background/70">
-              — SS Retífica
-            </footer>
           </blockquote>
         </div>
       </section>

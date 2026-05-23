@@ -8,8 +8,8 @@ export default function Contato() {
     <Layout>
       <PageHero
         eyebrow="Contato"
-        title="Fale com a SS Retífica. Diagnóstico inicial sem custo."
-        lead="Atendemos frotistas, oficinas parceiras e proprietários particulares de toda a região metropolitana de Belo Horizonte."
+        title="Fale com a SS Retífica. Avaliação inicial sem custo"
+        lead="Atendemos frotistas, oficinas e proprietários particulares de toda a região metropolitana de Belo Horizonte."
       />
 
       <section className="mx-auto max-w-350 px-6 lg:px-10 py-16 grid lg:grid-cols-12 gap-12">
@@ -31,10 +31,10 @@ export default function Contato() {
               Telefones
             </div>
             <a
-              href="tel:+553184995069"
+              href="tel:+5531984995069"
               className="mt-3 block font-display text-2xl font-semibold hover:text-accent transition-colors"
             >
-              +55 (31) 8499-5069
+              +55 (31) 98499-5069
             </a>
             <a
               href="tel:+553130421747"
@@ -70,7 +70,7 @@ export default function Contato() {
             <ul className="mt-5 space-y-3 text-sm">
               <li className="flex justify-between border-b border-background/10 pb-3">
                 <span>Segunda a Sexta</span>
-                <span className="font-display">08h00 — 17h45</span>
+                <span className="font-display">08h00 às 17h48</span>
               </li>
               <li className="flex justify-between">
                 <span>Sábados, Domingos &amp; Feriados</span>

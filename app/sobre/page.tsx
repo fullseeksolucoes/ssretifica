@@ -3,25 +3,7 @@
 import Image from "next/image";
 import { Layout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
-
-const values = [
-  {
-    t: "Precisão metrológica",
-    d: "Cada componente passa por controle dimensional rastreável, calibrado conforme normas ABNT/ISO.",
-  },
-  {
-    t: "Transparência integral",
-    d: "Diagnóstico documentado, peças mensuráveis e cliente acompanhando cada etapa da operação.",
-  },
-  {
-    t: "Equipe especializada",
-    d: "Técnicos com experiência em motores nacionais, importados e de alta performance.",
-  },
-  {
-    t: "Responsabilidade",
-    d: "Garantia formal, peças originais e procedimento técnico documentado para cada motor entregue.",
-  },
-];
+import { values, structureItems } from "@/lib/data";
 
 export default function Sobre() {
   return (
@@ -102,24 +84,7 @@ export default function Sobre() {
             Estrutura para usinagem e montagem de precisão
           </h2>
           <ul className="mt-8 divide-y hairline border-y hairline">
-            {[
-              [
-                "Setor de usinagem",
-                "Brunidoras, mandrilhadoras e retífica plana de cabeçotes.",
-              ],
-              [
-                "Laboratório metrológico",
-                "Micrômetros digitais, súbitos e relógio comparador.",
-              ],
-              [
-                "Bancada de teste dinâmico",
-                "Verificação de pressão de óleo, vazão e leak-down.",
-              ],
-              [
-                "Setor de montagem",
-                "Mecânicos especializados em motores nacionais e importados.",
-              ],
-            ].map(([t, d]) => (
+            {structureItems.map(([t, d]) => (
               <li key={t} className="py-5 grid grid-cols-12 gap-6">
                 <div className="col-span-5 font-display font-medium">{t}</div>
                 <div className="col-span-7 text-sm text-muted-foreground">

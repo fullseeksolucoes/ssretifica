@@ -34,17 +34,17 @@ export function PageHero({
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div
-              className={`flex items-center gap-3 text-xs uppercase tracking-[0.28em] ${backgroundImage ? "text-background/60" : "text-muted-foreground"}`}
+              className={`flex items-center gap-3 text-xs uppercase tracking-[0.28em] reveal-up ${backgroundImage ? "text-background/60" : "text-muted-foreground"}`}
             >
               <span className="h-px w-10 bg-accent" />
               {eyebrow}
             </div>
-            <h1 className="mt-6 font-display text-5xl md:text-7xl font-semibold tracking-tight text-balance max-w-4xl">
+            <h1 className="mt-6 font-display text-5xl md:text-7xl font-semibold tracking-tight text-balance max-w-4xl reveal-up">
               {title}
             </h1>
             {lead && (
               <p
-                className={`mt-6 max-w-2xl text-lg leading-relaxed ${backgroundImage ? "text-background/70" : "text-muted-foreground"}`}
+                className={`mt-6 max-w-2xl text-lg leading-relaxed reveal-up ${backgroundImage ? "text-background/70" : "text-muted-foreground"}`}
               >
                 {lead}
               </p>

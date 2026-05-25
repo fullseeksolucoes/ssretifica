@@ -1,33 +1,78 @@
+import { business, knowsAbout, serviceTypes } from "@/lib/data";
+
+const areaServed = [
+  { "@type": "City", name: "Belo Horizonte" },
+  { "@type": "AdministrativeArea", name: "Região Metropolitana de Belo Horizonte" },
+];
+
+const faqEntities = [
+  {
+    "@type": "Question",
+    name: "Qual o prazo médio de uma retífica completa?",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "Entre 8 e 14 dias úteis, dependendo da complexidade do motor e da disponibilidade de peças originais. Motores importados podem demandar prazo adicional.",
+    },
+  },
+  {
+    "@type": "Question",
+    name: "Vocês atendem motores diesel?",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "Sim. Atuamos com motores diesel leve, incluindo Mercedes-Benz, Cummins, MWM e marcas comerciais leves.",
+    },
+  },
+  {
+    "@type": "Question",
+    name: "Existe garantia técnica?",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "Toda retífica acompanha garantia formal de 3 meses (90 dias) com suporte pós-entrega dedicado.",
+    },
+  },
+  {
+    "@type": "Question",
+    name: "Posso acompanhar o serviço?",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "Sim. Disponibilizamos fotografias de cada etapa e recebemos visitas técnicas agendadas.",
+    },
+  },
+  {
+    "@type": "Question",
+    name: "Trabalham com motores de alta performance?",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "Sim. Possuímos linha dedicada a motores preparados, incluindo retífica de bloco com sobremedida, comando alto e ajustes para combustíveis alternativos.",
+    },
+  },
+  {
+    "@type": "Question",
+    name: "O diagnóstico técnico é gratuito?",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "A avaliação técnica preliminar, que inclui inspeção visual e análise auditiva, é realizada sem custo. Procedimentos diagnósticos específicos, como teste de pressão de óleo, compressão diferencial, fluxo e avaliação em bancada, são cobrados conforme a complexidade do serviço.",
+    },
+  },
+];
+
 export default function StructuredData() {
   const data = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://www.ssretifica.com.br/#business",
+        "@id": `${business.url}/#business`,
         additionalType: "https://schema.org/AutomotiveBusiness",
-        name: "SS Retífica",
-        description:
-          "Retífica de motores e usinagem de precisão em Belo Horizonte. Remoção, montagem e instalação de motores nacionais e importados.",
-        url: "https://www.ssretifica.com.br",
-        telephone: "+553130421747",
-        logo: "https://www.ssretifica.com.br/logo.webp",
-        image: "https://www.ssretifica.com.br/hero-engine.jpg",
-        sameAs: [
-          "https://wa.me/5531980235271",
-          "https://instagram.com/retificass",
-        ],
+        name: business.name,
+        description: business.description,
+        url: business.url,
+        telephone: business.telephone,
+        logo: business.logo,
+        image: business.image,
+        sameAs: [business.whatsappLinkSimple, business.instagramUrl],
         priceRange: "R$",
-        areaServed: [
-          {
-            "@type": "City",
-            name: "Belo Horizonte",
-          },
-          {
-            "@type": "AdministrativeArea",
-            name: "Região Metropolitana de Belo Horizonte",
-          },
-        ],
+        areaServed,
         address: {
           "@type": "PostalAddress",
           streetAddress: "Rua João de Deus Matos, 197",
@@ -38,131 +83,48 @@ export default function StructuredData() {
         },
         geo: {
           "@type": "GeoCoordinates",
-          latitude: "-19.88524194384415",
-          longitude: "-43.93603090206885",
+          latitude: business.geo.latitude,
+          longitude: business.geo.longitude,
         },
-        knowsAbout: [
-          "Retífica de motores",
-          "Usinagem de cabeçotes",
-          "Retífica de virabrequins",
-          "Recondicionamento de bielas",
-          "Montagem especializada de motores",
-          "Remoção e instalação de motores",
-          "Diagnóstico técnico automotivo",
-          "Teste de pressão de óleo",
-          "Compressão diferencial",
-          "Balanceamento dinâmico",
-        ],
+        knowsAbout,
       },
       {
         "@type": "Organization",
-        "@id": "https://www.ssretifica.com.br/#organization",
-        name: "SS Retífica",
-        url: "https://www.ssretifica.com.br",
-        logo: "https://www.ssretifica.com.br/logo.webp",
-        image: "https://www.ssretifica.com.br/hero-engine.jpg",
+        "@id": `${business.url}/#organization`,
+        name: business.name,
+        url: business.url,
+        logo: business.logo,
+        image: business.image,
         contactPoint: {
           "@type": "ContactPoint",
-          telephone: "+553130421747",
+          telephone: business.telephone,
           contactType: "customer support",
           availableLanguage: ["Portuguese"],
         },
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.ssretifica.com.br/#website",
-        name: "SS Retífica",
-        url: "https://www.ssretifica.com.br",
+        "@id": `${business.url}/#website`,
+        name: business.name,
+        url: business.url,
         inLanguage: "pt-BR",
-        publisher: {
-          "@id": "https://www.ssretifica.com.br/#organization",
-        },
+        publisher: { "@id": `${business.url}/#organization` },
       },
       {
         "@type": "Service",
-        "@id": "https://www.ssretifica.com.br/#service",
+        "@id": `${business.url}/#service`,
         name: "Retífica e Usinagem de Motores",
         description:
           "Serviços de retífica de motores nacionais e importados. Remoção, usinagem de cabeçotes, retífica de virabrequins, montagem e instalação final.",
-        provider: {
-          "@id": "https://www.ssretifica.com.br/#business",
-        },
+        provider: { "@id": `${business.url}/#business` },
         category: "Retífica de Motores",
-        areaServed: [
-          {
-            "@type": "City",
-            name: "Belo Horizonte",
-          },
-          {
-            "@type": "AdministrativeArea",
-            name: "Região Metropolitana de Belo Horizonte",
-          },
-        ],
-        serviceType: [
-          "Retífica completa de motores",
-          "Usinagem de cabeçotes",
-          "Retífica de virabrequins",
-          "Recondicionamento de bielas",
-          "Remoção e instalação de motores",
-          "Montagem especializada de motores",
-          "Diagnóstico técnico",
-          "Teste dinâmico",
-          "Balanceamento dinâmico",
-        ],
+        areaServed,
+        serviceType: serviceTypes,
       },
       {
         "@type": "FAQPage",
-        "@id": "https://www.ssretifica.com.br/#faq",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Qual o prazo médio de uma retífica completa?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Entre 8 e 14 dias úteis, dependendo da complexidade do motor e da disponibilidade de peças originais. Motores importados podem demandar prazo adicional.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Vocês atendem motores diesel?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Sim. Atuamos com motores diesel leve, incluindo Mercedes-Benz, Cummins, MWM e marcas comerciais leves.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Existe garantia técnica?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Toda retífica acompanha garantia formal de 3 meses (90 dias) com suporte pós-entrega dedicado.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Posso acompanhar o serviço?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Sim. Disponibilizamos fotografias de cada etapa e recebemos visitas técnicas agendadas.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Trabalham com motores de alta performance?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Sim. Possuímos linha dedicada a motores preparados, incluindo retífica de bloco com sobremedida, comando alto e ajustes para combustíveis alternativos.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "O diagnóstico técnico é gratuito?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "A avaliação técnica preliminar, que inclui inspeção visual e análise auditiva, é realizada sem custo. Procedimentos diagnósticos específicos, como teste de pressão de óleo, compressão diferencial, fluxo e avaliação em bancada, são cobrados conforme a complexidade do serviço.",
-            },
-          },
-        ],
+        "@id": `${business.url}/#faq`,
+        mainEntity: faqEntities,
       },
     ],
   };
@@ -170,9 +132,7 @@ export default function StructuredData() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(data),
-      }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   );
 }

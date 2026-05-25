@@ -2,6 +2,7 @@
 
 import { Layout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
+import { business } from "@/lib/data";
 
 export default function Contato() {
   return (
@@ -19,10 +20,10 @@ export default function Contato() {
               WhatsApp
             </div>
             <a
-              href="https://wa.me/5531980235271"
+              href={business.whatsappLinkSimple}
               className="mt-2 block font-display text-2xl font-semibold hover:text-accent transition-colors"
             >
-              +55 (31) 98023-5271
+              +55 {business.whatsapp}
             </a>
           </div>
 
@@ -30,24 +31,15 @@ export default function Contato() {
             <div className="text-xs uppercase tracking-[0.28em] text-muted-foreground">
               Telefones
             </div>
-            <a
-              href="tel:+5531984995069"
-              className="mt-3 block font-display text-2xl font-semibold hover:text-accent transition-colors"
-            >
-              +55 (31) 98499-5069
-            </a>
-            <a
-              href="tel:+553130421747"
-              className="mt-2 block font-display text-2xl font-semibold hover:text-accent transition-colors"
-            >
-              +55 (31) 3042-1747
-            </a>
-            <a
-              href="tel:+553132431999"
-              className="mt-2 block font-display text-2xl font-semibold hover:text-accent transition-colors"
-            >
-              +55 (31) 3243-1999
-            </a>
+            {business.phones.map((phone, i) => (
+              <a
+                key={phone}
+                href={`tel:${business.phonesRaw[i]}`}
+                className="mt-3 block font-display text-2xl font-semibold hover:text-accent transition-colors first:mt-3"
+              >
+                +55 {phone}
+              </a>
+            ))}
           </div>
 
           <div className="border-l-2 border-accent pl-6">
@@ -55,11 +47,10 @@ export default function Contato() {
               Endereço
             </div>
             <a
-              href="https://maps.app.goo.gl/1W4UGAd8ZtY2Goiu5"
+              href={business.mapsUrl}
               className="mt-2 block font-display text-2xl font-semibold hover:text-accent transition-colors"
             >
-              Rua João de Deus Matos, 197 - Ipiranga, Belo Horizonte - MG,
-              31160-080
+              {business.address}
             </a>
           </div>
 
@@ -70,11 +61,11 @@ export default function Contato() {
             <ul className="mt-5 space-y-3 text-sm">
               <li className="flex justify-between border-b border-background/10 pb-3">
                 <span>Segunda a Sexta</span>
-                <span className="font-display">08h00 às 17h48</span>
+                <span className="font-display">{business.hoursDetailed.weekdays}</span>
               </li>
               <li className="flex justify-between">
                 <span>Sábados, Domingos &amp; Feriados</span>
-                <span className="font-display text-background/40">Fechado</span>
+                <span className="font-display text-background/40">{business.hoursDetailed.weekends}</span>
               </li>
             </ul>
           </div>
@@ -84,7 +75,7 @@ export default function Contato() {
           <div className="aspect-4/5 lg:aspect-auto lg:h-full relative overflow-hidden border hairline">
             <iframe
               title="Localização SS Retífica"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9185.12262179608!2d-43.93603090206885!3d-19.88524194384415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69a7048db4e27%3A0x74455e7d3ab24181!2sSS%20RET%C3%8DFICA%20DE%20MOTORES%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1779324308429!5m2!1spt-BR!2sbr"
+              src={business.mapsEmbed}
               className="absolute inset-0 h-full w-full grayscale contrast-110"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

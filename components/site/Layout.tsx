@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,13 +10,7 @@ import { FloatingWhatsApp } from "./FloatingWhatsApp";
 import { FaClock, FaMapMarkedAlt } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { BsTelephoneFill } from "react-icons/bs";
-
-const nav = [
-  { to: "/", label: "Início" },
-  { to: "/sobre", label: "A Empresa" },
-  { to: "/servicos", label: "Serviços" },
-  { to: "/contato", label: "Contato" },
-];
+import { nav, business } from "@/lib/data";
 
 export function Header({ transparent = false }: { transparent?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
@@ -163,7 +158,7 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background mt-32">
+    <footer className="bg-foreground text-background">
       <div className="mx-auto max-w-350 px-6 lg:px-10 pt-20 pb-10">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
@@ -204,37 +199,36 @@ export function Footer() {
             <div className="text-xs uppercase tracking-[0.22em] text-background/40 mb-5">
               Contato
             </div>
-            <ul className="space-y-3 text-sm text-background/80">
+              <ul className="space-y-3 text-sm text-background/80">
               <li>
                 <a
-                  href="https://maps.app.goo.gl/1W4UGAd8ZtY2Goiu5"
+                  href={business.mapsUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-start gap-2 group"
                 >
                   <FaMapMarkedAlt className="mt-0.5 text-accent group-hover:text-accent/80 transition-colors shrink-0" />
                   <span className="group-hover:text-accent transition-colors">
-                    Rua João de Deus Matos, 197 - Ipiranga, Belo Horizonte - MG,
-                    31160-080
+                    {business.address}
                   </span>
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/5531980235271"
+                  href={business.whatsappLinkSimple}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2 group"
                 >
                   <IoLogoWhatsapp className="text-accent group-hover:text-accent/80 transition-colors shrink-0" />
                   <span className="group-hover:text-accent transition-colors">
-                    (31) 98023-5271
+                    {business.whatsapp}
                   </span>
                 </a>
               </li>
               <li>
                 <a
-                  href="https://instagram.com/retificass"
+                  href={business.instagramUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2 group"
@@ -249,46 +243,44 @@ export function Footer() {
                     </svg>
                   </span>
                   <span className="group-hover:text-accent transition-colors">
-                    @retificass
+                    {business.instagram}
                   </span>
                 </a>
               </li>
-              <li>
-                <a
-                  href="tel:+5531984995069"
-                  className="flex items-center gap-2 group"
-                >
-                  <BsTelephoneFill className="text-accent group-hover:text-accent/80 transition-colors shrink-0" />
-                  <span className="group-hover:text-accent transition-colors">
-                    (31) 98499-5069
-                  </span>
-                </a>
+              <li className="flex items-center gap-0 flex-wrap">
+                {business.phones.map((phone, i) => (
+                  <React.Fragment key={phone}>
+                    {i > 0 && <span className="mx-2 text-background/20">/</span>}
+                    <a
+                      href={`tel:${business.phonesRaw[i]}`}
+                      className="flex items-center gap-1.5 group"
+                    >
+                      <BsTelephoneFill className="text-accent group-hover:text-accent/80 transition-colors shrink-0 text-[10px]" />
+                      <span className="group-hover:text-accent transition-colors text-xs">
+                        {phone}
+                      </span>
+                    </a>
+                  </React.Fragment>
+                ))}
               </li>
               <li>
                 <a
-                  href="tel:+553130421747"
+                  href={`mailto:${business.email}`}
                   className="flex items-center gap-2 group"
                 >
-                  <BsTelephoneFill className="text-accent group-hover:text-accent/80 transition-colors shrink-0" />
-                  <span className="group-hover:text-accent transition-colors">
-                    (31) 3042-1747
+                  <span className="text-accent group-hover:text-accent/80 transition-colors shrink-0">
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
                   </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+553132431999"
-                  className="flex items-center gap-2 group"
-                >
-                  <BsTelephoneFill className="text-accent group-hover:text-accent/80 transition-colors shrink-0" />
                   <span className="group-hover:text-accent transition-colors">
-                    (31) 3243-1999
+                    {business.email}
                   </span>
                 </a>
               </li>
               <li className="flex items-center gap-2 text-background/50">
                 <FaClock className="text-accent shrink-0" />
-                <span>Seg–Sex · 08h00 às 17h48</span>
+                <span>{business.hours}</span>
               </li>
             </ul>
           </div>
@@ -297,7 +289,7 @@ export function Footer() {
         <div className="mt-16 pt-6 border-t border-background/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-background/40">
           <div className="leading-relaxed">
             © {new Date().getFullYear()} Ss Retifica Recondicionadora de Motores
-            Ltda · CNPJ 37.280.196/0001-25
+            Ltda · CNPJ {business.cnpj}
           </div>
           <span className="flex items-center gap-1.5 text-background/30 hover:text-background/60 transition-colors">
             <span>Desenvolvido por</span>

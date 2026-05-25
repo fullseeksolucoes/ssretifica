@@ -3,97 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Layout } from "@/components/site/Layout";
-
-const differentials = [
-  {
-    t: "Controle metrológico",
-    d: "Cada peça é medida com instrumentos calibrados e acompanhada de laudo técnico.",
-  },
-  {
-    t: "Usinagem de precisão",
-    d: "Equipamentos dedicados para cabeçotes, blocos, virabrequins e bielas dentro das tolerâncias do fabricante.",
-  },
-  {
-    t: "Garantia técnica de 3 meses",
-    d: "90 dias de cobertura com suporte direto da nossa equipe.",
-  },
-  {
-    t: "Peças originais",
-    d: "Usamos componentes genuínos em cada serviço de reconstrução.",
-  },
-];
-
-const services = [
-  {
-    t: "Retífica completa de motores",
-    d: "Reconstrução integral com substituição de peças críticas e teste dinâmico final.",
-    img: "/retifica.webp",
-  },
-  {
-    t: "Usinagem de cabeçotes",
-    d: "Retífica de plano, sedes, guias e teste hidráulico de estanqueidade.",
-    img: "/cabecote.webp",
-  },
-  {
-    t: "Retífica de virabrequins",
-    d: "Polimento, mancalização e balanceamento dinâmico calibrado.",
-    img: "/virabrequins.webp",
-  },
-  {
-    t: "Diagnóstico técnico",
-    d: "Compressão, leak-down, pressão de óleo e inspeção de lubrificante.",
-    img: "/diagnostico.webp",
-  },
-  {
-    t: "Remoção e instalação de motores",
-    d: "Remoção, preparação e reinstalação completa do motor no veículo.",
-    img: "/retifica.webp",
-  },
-];
-
-const reviews = [
-  {
-    n: "Analuu Abreu",
-    s: "Excelente profissionais e serviços de qualidade! Gosto muito de ser clientes de vocês",
-    d: "há uma semana",
-  },
-  {
-    n: "Magnus Konare",
-    s: "Serviço de excelência prestado pelo pessoal desta retífica. Tudo ocorreu bem e a entrega do motor foi feita antes do prazo combinado. Agradeço a toda equipe SS.",
-    d: "há 2 anos",
-  },
-  {
-    n: "Fabricio Rocha",
-    s: "Excelente serviço",
-    d: "há 2 anos",
-  },
-  {
-    n: "Andre Lucas",
-    s: "Muito bem atendido pelo Sérgio e toda sua equipe. Grande abraço!! Martins Centro Automotivo",
-    d: "há 3 anos",
-  },
-  // {
-  //   n: "Matheus Rodrigues",
-  //   s: "Melhor retifica de Belo Horizonte",
-  //   d: "há 5 anos",
-  // },
-  // {
-  //   n: "Joselito Lima Reis",
-  //   s: "Excelente ! Ótimo trabalho e o que é difícil nos dias atuais , honestidade! Parabéns ao Hudson e sua equipe!!",
-  //   d: "há 6 anos",
-  // },
-  // {
-  //   n: "Washington Souza",
-  //   s: "Ótima retifica qualidade e preço, procurar o Sérgio ou Samuel",
-  //   d: "há 7 anos",
-  // },
-  // {
-  //   n: "Jose Ângelo",
-  //   s: "Ótima",
-  //   d: "há 8 anos",
-  // },
-];
-
+import { differentials, servicesSummary as services, reviews, business } from "@/lib/data";
 export default function Home() {
   return (
     <Layout transparentHeader>
@@ -368,11 +278,11 @@ export default function Home() {
               <span>→</span>
             </Link>
             <a
-              href="https://wa.me/5531980235271"
+              href={business.whatsappLinkSimple}
               className="inline-flex items-center justify-between border border-background/30 px-8 py-5 hover:border-accent hover:text-accent transition-colors"
             >
               <span className="font-display text-lg font-medium">
-                (31) 98023-5271
+                {business.whatsapp}
               </span>
               <span>↗</span>
             </a>
@@ -391,7 +301,7 @@ export default function Home() {
         <div className="relative overflow-hidden">
           <iframe
             title="Localização SS Retífica"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9185.12262179608!2d-43.93603090206885!3d-19.88524194384415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69a7048db4e27%3A0x74455e7d3ab24181!2sSS%20RET%C3%8DFICA%20DE%20MOTORES%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1779324308429!5m2!1spt-BR!2sbr"
+            src={business.mapsEmbed}
             className="h-90 md:h-130 w-full grayscale contrast-125 brightness-[0.98]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
